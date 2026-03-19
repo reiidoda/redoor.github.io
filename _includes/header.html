@@ -2,10 +2,13 @@
   <div class="shell-wide header-inner">
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="ReDoor home">
       <span class="brand-mark-wrap" aria-hidden="true">
-        <img class="brand-mark" src="{{ '/favicon.svg' | relative_url }}" alt="" width="24" height="24" loading="eager" decoding="async">
+        <img class="brand-mark" src="{{ '/assets/img/brand/redoor-mark.svg' | relative_url }}" alt="" width="24" height="24" loading="eager" decoding="async">
       </span>
       <span class="brand-copy">
-        <span class="brand-name">ReDoor</span>
+        <span class="brand-name-row">
+          <span class="brand-name">ReDoor</span>
+          <span class="brand-chip">Canonical project site</span>
+        </span>
         <span class="brand-tag">{{ site.data.site.tagline }}</span>
       </span>
     </a>
@@ -29,8 +32,9 @@
     <nav id="primary-navigation" class="site-nav" data-site-nav aria-label="Primary navigation">
       <ul class="menu">
         {% for item in site.data.navigation %}
-          <li>
+          <li class="menu__item{% if item.external %} menu__item--cta{% endif %}">
             <a
+              class="menu__link{% if item.external %} menu__link--cta{% endif %}"
               href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
               data-nav-link
               {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}
@@ -43,4 +47,3 @@
     </nav>
   </div>
 </header>
-

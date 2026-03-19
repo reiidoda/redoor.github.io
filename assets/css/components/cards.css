@@ -13,8 +13,8 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(180deg, rgba(132, 215, 255, 0.06), rgba(255, 255, 255, 0.015)),
-    rgba(9, 15, 24, 0.9);
+    linear-gradient(180deg, rgba(241, 31, 42, 0.06), rgba(255, 255, 255, 0.015)),
+    rgba(13, 9, 10, 0.9);
   box-shadow: var(--shadow-soft);
 }
 
@@ -30,7 +30,7 @@
   position: absolute;
   inset: 0 0 auto;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(132, 215, 255, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(241, 31, 42, 0.55), transparent);
 }
 
 .stat-card__label,
@@ -88,6 +88,17 @@
   display: grid;
   gap: 1rem;
   padding: 0;
+  transition:
+    transform var(--duration-fast) var(--easing-standard),
+    border-color var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.article-card:hover,
+.article-card:focus-within {
+  transform: translate3d(0, -3px, 0);
+  border-color: var(--accent-line);
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.34);
 }
 
 .article-card__cover {
@@ -137,7 +148,7 @@
   padding: var(--space-5);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.02);
   box-shadow: var(--shadow-soft);
 }
 
@@ -162,13 +173,17 @@
 
 .filter-search input {
   width: 100%;
-  min-height: 2.8rem;
+  min-height: 2.95rem;
   padding: 0.72rem 0.95rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.03);
   color: var(--text);
   font: inherit;
+}
+
+.filter-search input:focus-visible {
+  border-color: var(--accent-line);
 }
 
 .filter-count {
@@ -181,4 +196,3 @@
   text-align: center;
   color: var(--muted-strong);
 }
-

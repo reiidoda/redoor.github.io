@@ -39,3 +39,7 @@
   color: var(--text);
 }
 
+.post-nav__links a:hover,
+.post-nav__links a:focus-visible {
+  color: var(--accent-strong);
+}

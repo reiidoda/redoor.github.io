@@ -1,10 +1,23 @@
 .page-hero {
+  position: relative;
   padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 56%;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(241, 31, 42, 0.18), transparent 72%);
+  filter: blur(16px);
+  pointer-events: none;
 }
 
 .page-hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
   gap: clamp(1.2rem, 3vw, 2rem);
   align-items: end;
 }
@@ -42,4 +55,3 @@
     grid-template-columns: 1fr;
   }
 }
-

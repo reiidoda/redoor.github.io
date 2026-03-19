@@ -8,13 +8,23 @@ permalink: /site.webmanifest
   "description": "Privacy-first secure messaging with untrusted relays",
   "start_url": "{{ '/' | relative_url }}",
   "display": "standalone",
-  "background_color": "#040a12",
-  "theme_color": "#040a12",
+  "background_color": "#080506",
+  "theme_color": "#080506",
   "icons": [
     {
       "src": "{{ '/favicon.svg' | relative_url }}",
       "sizes": "any",
       "type": "image/svg+xml"
+    },
+    {
+      "src": "{{ '/favicon-192.png' | relative_url }}",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ '/favicon-512.png' | relative_url }}",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }

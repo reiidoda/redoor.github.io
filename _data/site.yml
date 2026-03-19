@@ -14,21 +14,45 @@ hero:
     relay-blind forwarding, volatile client state, and blockchain-backed tamper evidence.
 footer:
   note: Open-source secure messaging architecture
+  status: Canonical public surface for ReDoor architecture, security posture, roadmap, and contributor-facing documentation.
   legal: Built with GitHub Pages and Jekyll.
-  links:
-    - label: GitHub
-      url: https://github.com/reiidoda/ReDoor
-      external: true
-    - label: Security Policy
-      url: https://github.com/reiidoda/ReDoor/blob/main/SECURITY.md
-      external: true
-    - label: Roadmap
-      url: /roadmap/
-      external: false
-    - label: Docs
-      url: /docs/
-      external: false
-    - label: RSS
-      url: /feed.xml
-      external: false
-
+  groups:
+    - title: Navigate
+      links:
+        - label: Architecture
+          url: /architecture/
+          external: false
+        - label: Security
+          url: /security/
+          external: false
+        - label: Compare
+          url: /compare/
+          external: false
+        - label: Blog
+          url: /blog/
+          external: false
+    - title: Project
+      links:
+        - label: Roadmap
+          url: /roadmap/
+          external: false
+        - label: Status
+          url: /status/
+          external: false
+        - label: Docs
+          url: /docs/
+          external: false
+        - label: GitHub
+          url: https://github.com/reiidoda/ReDoor
+          external: true
+    - title: Trust
+      links:
+        - label: Security Policy
+          url: https://github.com/reiidoda/ReDoor/blob/main/SECURITY.md
+          external: true
+        - label: Standards Profile
+          url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/STANDARDS_PROFILE.md
+          external: true
+        - label: RSS
+          url: /feed.xml
+          external: false

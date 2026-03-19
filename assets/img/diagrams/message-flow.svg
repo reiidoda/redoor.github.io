@@ -1,32 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" fill="none">
-  <rect width="1280" height="860" rx="32" fill="#07111B"/>
-  <text x="118" y="92" fill="#84D7FF" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4">SEQUENCE VIEW</text>
-  <text x="102" y="152" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Sender Device</text>
-  <text x="354" y="152" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Directory</text>
-  <text x="586" y="152" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Relay</text>
-  <text x="842" y="152" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Receiver Device</text>
-  <text x="1088" y="152" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Blockchain</text>
-  <path d="M168 190V764M406 190V764M646 190V764M924 190V764M1146 190V764" stroke="#234055" stroke-width="2" stroke-dasharray="8 10"/>
-  <rect x="114" y="214" width="258" height="74" rx="18" fill="#0D1725" stroke="#284156"/>
-  <text x="136" y="257" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="22">Generate identity and prekeys</text>
-  <path d="M248 326H406" stroke="#84D7FF" stroke-width="6" stroke-linecap="round"/>
-  <path d="M406 326l-18-14v28l18-14z" fill="#84D7FF"/>
-  <text x="198" y="314" fill="#94A6BC" font-family="IBM Plex Mono, monospace" font-size="16">resolve bundle</text>
-  <rect x="454" y="290" width="238" height="74" rx="18" fill="#0D1725" stroke="#284156"/>
-  <text x="474" y="333" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="22">Signed resolve response</text>
-  <path d="M406 410H646" stroke="#84D7FF" stroke-width="6" stroke-linecap="round"/>
-  <path d="M646 410l-18-14v28l18-14z" fill="#84D7FF"/>
-  <text x="434" y="398" fill="#94A6BC" font-family="IBM Plex Mono, monospace" font-size="16">opaque envelope</text>
-  <rect x="698" y="374" width="244" height="74" rx="18" fill="#0D1725" stroke="#4A7AA0"/>
-  <text x="718" y="417" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="22">Queue by rotating handle</text>
-  <path d="M646 502H924" stroke="#84D7FF" stroke-width="6" stroke-linecap="round"/>
-  <path d="M924 502l-18-14v28l18-14z" fill="#84D7FF"/>
-  <text x="702" y="490" fill="#94A6BC" font-family="IBM Plex Mono, monospace" font-size="16">fetch once</text>
-  <rect x="748" y="546" width="284" height="74" rx="18" fill="#0D1725" stroke="#284156"/>
-  <text x="768" y="589" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="22">Decrypt and consume in memory</text>
-  <path d="M248 640H1146" stroke="#55B7FF" stroke-width="6" stroke-linecap="round"/>
-  <path d="M1146 640l-18-14v28l18-14z" fill="#55B7FF"/>
-  <text x="580" y="628" fill="#94A6BC" font-family="IBM Plex Mono, monospace" font-size="16">submit message-hash commitment</text>
-  <rect x="1000" y="604" width="218" height="74" rx="18" fill="#0D1725" stroke="#284156"/>
-  <text x="1022" y="647" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="22">Store integrity evidence</text>
+  <style>
+    .lifeline { animation: lift 8s ease-in-out infinite; }
+    .trace { animation: dash 7.5s linear infinite; }
+    .pulse { animation: pulse 5s ease-in-out infinite; }
+    @keyframes dash {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -36; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .82; }
+      50% { opacity: 1; }
+    }
+    @keyframes lift {
+      0%, 100% { opacity: .46; }
+      50% { opacity: .7; }
+    }
+  </style>
+  <rect width="1280" height="860" rx="32" fill="#0A0607"/>
+  <text x="118" y="92" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.8">SEQUENCE VIEW</text>
+  <text x="102" y="152" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Sender Device</text>
+  <text x="352" y="152" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Directory</text>
+  <text x="590" y="152" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Relay</text>
+  <text x="834" y="152" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Receiver Device</text>
+  <text x="1084" y="152" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="24" font-weight="700">Blockchain</text>
+  <path d="M168 190V764M406 190V764M646 190V764M924 190V764M1146 190V764" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="8 10" class="lifeline"/>
+  <rect x="108" y="214" width="264" height="82" rx="20" fill="#171011" stroke="rgba(255,255,255,0.08)"/>
+  <text x="132" y="262" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Generate identity and prekeys</text>
+  <path d="M248 340H406" stroke="#F11F2A" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 18" class="trace"/>
+  <path d="M406 340l-18-14v28l18-14Z" fill="#F11F2A" class="pulse"/>
+  <text x="194" y="328" fill="#CDBEC0" font-family="IBM Plex Mono, monospace" font-size="16">resolve bundle</text>
+  <rect x="446" y="300" width="254" height="82" rx="20" fill="#171011" stroke="rgba(255,255,255,0.08)"/>
+  <text x="470" y="348" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Signed resolve response</text>
+  <path d="M406 434H646" stroke="#F11F2A" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 18" class="trace"/>
+  <path d="M646 434l-18-14v28l18-14Z" fill="#F11F2A" class="pulse"/>
+  <text x="432" y="422" fill="#CDBEC0" font-family="IBM Plex Mono, monospace" font-size="16">opaque envelope</text>
+  <rect x="688" y="394" width="258" height="82" rx="20" fill="#181011" stroke="rgba(241,31,42,0.22)"/>
+  <text x="712" y="442" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Queue by rotating handle</text>
+  <path d="M646 534H924" stroke="#F11F2A" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 18" class="trace"/>
+  <path d="M924 534l-18-14v28l18-14Z" fill="#F11F2A" class="pulse"/>
+  <text x="706" y="522" fill="#CDBEC0" font-family="IBM Plex Mono, monospace" font-size="16">fetch once</text>
+  <rect x="738" y="580" width="294" height="82" rx="20" fill="#171011" stroke="rgba(255,255,255,0.08)"/>
+  <text x="762" y="628" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Decrypt and consume in memory</text>
+  <path d="M248 690H1146" stroke="#FF5A57" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 18" class="trace"/>
+  <path d="M1146 690l-18-14v28l18-14Z" fill="#FF5A57" class="pulse"/>
+  <text x="548" y="678" fill="#CDBEC0" font-family="IBM Plex Mono, monospace" font-size="16">submit message-hash commitment</text>
+  <rect x="1000" y="648" width="218" height="82" rx="20" fill="#171011" stroke="rgba(255,255,255,0.08)"/>
+  <text x="1024" y="696" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Store integrity evidence</text>
 </svg>

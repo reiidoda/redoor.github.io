@@ -17,7 +17,7 @@ const heroPage = {
   requiredMarkers: [
     "class=\"hero__headline\"",
     "id=\"hero-title\"",
-    "class=\"hero-visual\"",
+    "class=\"hero-visual",
     "class=\"hero-links\"",
     "class=\"metric-strip\"",
   ],

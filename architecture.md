@@ -35,27 +35,48 @@ keywords:
 ---
 <section class="section">
   <div class="shell page-content">
-    <section class="page-section" data-reveal>
-      <div class="page-section__header">
-        <p class="section-label">System Overview</p>
-        <h2>Five runtime planes, one narrow responsibility each.</h2>
-        <p>
-          The ReDoor monorepo is service-oriented at runtime. The client and app shell hold the trusted edge.
-          Relay, directory, and evidence services are separate operational planes with distinct security roles.
-        </p>
+    <section class="page-section architecture-stage" data-reveal>
+      <div class="page-section__header page-section__header--split">
+        <div>
+          <p class="section-label">System Overview</p>
+          <h2>Five runtime planes, one narrow responsibility each.</h2>
+          <p>
+            The ReDoor monorepo is service-oriented at runtime. The client and app shell hold the trusted edge.
+            Relay, directory, and evidence services are separate operational planes with distinct security roles.
+          </p>
+        </div>
+
+        <aside class="architecture-stage__summary premium-panel">
+          <p class="panel-card__label">Topology posture</p>
+          <ul class="architecture-stage__metrics">
+            <li><strong>2 trusted edge planes</strong><span>iOS shell and client runtime keep identity, session state, and wipe logic local.</span></li>
+            <li><strong>1 untrusted transport plane</strong><span>Relay storage and delivery stay intentionally opaque.</span></li>
+            <li><strong>2 support planes</strong><span>Directory discovery and evidence commitments remain operationally separate.</span></li>
+          </ul>
+        </aside>
       </div>
 
-      <figure class="diagram-frame">
-        <img
-          src="{{ '/assets/img/diagrams/architecture-topology.svg' | relative_url }}"
-          alt="Architecture diagram showing the iOS app and client runtime on the left, an untrusted relay plane in the center, and the directory plus blockchain evidence planes on the right."
-          width="1280"
-          height="760"
-          loading="lazy"
-          decoding="async"
-        >
-        <figcaption>ReDoor’s public runtime topology: trusted edges, untrusted relay middle, and separate discovery and evidence planes.</figcaption>
-      </figure>
+      <div class="architecture-visual premium-panel">
+        <div class="architecture-visual__copy">
+          <p class="eyebrow">Trusted edges, narrow middle</p>
+          <p>
+            The left side terminates sensitive state. The center only forwards opaque envelopes.
+            Discovery and evidence stay decoupled so no single middle layer becomes a global trust anchor.
+          </p>
+        </div>
+
+        <figure class="diagram-frame diagram-frame--architecture">
+          <img
+            src="{{ '/assets/img/diagrams/architecture-topology.svg' | relative_url }}"
+            alt="Architecture diagram showing the iOS app and client runtime on the left, an untrusted relay plane in the center, and the directory plus blockchain evidence planes on the right."
+            width="1280"
+            height="760"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>ReDoor’s public runtime topology: trusted edges, untrusted relay middle, and separate discovery and evidence planes.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="page-section" data-reveal>
@@ -75,14 +96,29 @@ keywords:
       </div>
     </section>
 
-    <section class="page-section" data-reveal>
-      <div class="page-section__header">
-        <p class="section-label">End-To-End Flow</p>
-        <h2>Message transport is opaque in the middle and stateful only at the edges.</h2>
+    <section class="page-section architecture-stage" data-reveal>
+      <div class="page-section__header page-section__header--split">
+        <div>
+          <p class="section-label">End-To-End Flow</p>
+          <h2>Message transport is opaque in the middle and stateful only at the edges.</h2>
+          <p>
+            The sequence matters: resolve signed material, derive sender state, push opaque ciphertext through the relay,
+            then consume the message in device memory before recording commitment evidence.
+          </p>
+        </div>
+
+        <aside class="architecture-stage__summary premium-panel">
+          <p class="panel-card__label">Flow posture</p>
+          <ul class="architecture-stage__metrics">
+            <li><strong>Signed key lookup first</strong><span>Directory responses establish the sender’s view of recipient material.</span></li>
+            <li><strong>Opaque relay second</strong><span>The relay sees handles, not usable plaintext.</span></li>
+            <li><strong>Evidence last</strong><span>Blockchain writes are commitments, not message content.</span></li>
+          </ul>
+        </aside>
       </div>
 
-      <div class="two-column">
-        <figure class="diagram-frame">
+      <div class="flow-stage premium-panel">
+        <figure class="diagram-frame diagram-frame--flow">
           <img
             src="{{ '/assets/img/diagrams/message-flow.svg' | relative_url }}"
             alt="Sequence diagram showing key resolution, opaque relay transport, receiver-side in-memory decryption, and blockchain commitment submission."
@@ -94,7 +130,7 @@ keywords:
           <figcaption>The public message path from prekeys through relay delivery and evidence submission.</figcaption>
         </figure>
 
-        <div class="flow-list">
+        <div class="flow-list flow-list--stacked">
           {% for item in site.data.architecture.message_flow %}
             <article class="flow-step">
               <div class="flow-step__index">{{ item.step }}</div>

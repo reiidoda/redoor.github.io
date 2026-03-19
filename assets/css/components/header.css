@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid rgba(165, 203, 242, 0.12);
-  background: rgba(4, 10, 18, 0.72);
+  border-bottom: 1px solid var(--line);
+  background: rgba(8, 5, 6, 0.74);
   backdrop-filter: blur(18px) saturate(145%);
   transition:
     background var(--duration-fast) var(--easing-standard),
@@ -12,9 +12,9 @@
 }
 
 .site-header.is-scrolled {
-  background: rgba(4, 10, 18, 0.88);
-  border-bottom-color: rgba(165, 203, 242, 0.2);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(8, 5, 6, 0.9);
+  border-bottom-color: var(--line-strong);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.34);
 }
 
 .header-inner {
@@ -28,44 +28,67 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.9rem;
   text-decoration: none;
   min-width: 0;
 }
 
 .brand-mark-wrap {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.9rem;
-  border: 1px solid var(--line);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--accent-line);
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, rgba(132, 215, 255, 0.08), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(241, 31, 42, 0.14), rgba(255, 255, 255, 0.03));
   box-shadow: var(--shadow-glow);
 }
 
 .brand-mark {
-  width: 1rem;
-  height: 1rem;
+  width: 1.08rem;
+  height: 1.08rem;
 }
 
 .brand-copy {
   display: grid;
-  gap: 0.06rem;
+  gap: 0.14rem;
+  min-width: 0;
+}
+
+.brand-name-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   min-width: 0;
 }
 
 .brand-name {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 680;
   letter-spacing: 0.01em;
   color: var(--text);
 }
 
+.brand-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.35rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--accent-line);
+  background: var(--accent-surface);
+  color: var(--text-soft);
+  font-size: 0.62rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .brand-tag {
   color: var(--muted);
   font-size: 0.72rem;
-  line-height: 1.2;
+  line-height: 1.25;
+  max-width: 34ch;
 }
 
 .site-nav {
@@ -76,27 +99,57 @@
   list-style: none;
   display: inline-flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 0.3rem;
   padding: 0;
   margin: 0;
 }
 
-.menu a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.1rem;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.83rem;
-  font-weight: 520;
-  letter-spacing: 0.01em;
-  transition: color var(--duration-fast) var(--easing-standard), opacity var(--duration-fast) var(--easing-standard);
+.menu__item {
+  margin: 0;
 }
 
-.menu a:hover,
-.menu a:focus-visible,
-.menu a.is-current {
+.menu__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0.5rem 0.82rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 540;
+  letter-spacing: 0.01em;
+  transition:
+    color var(--duration-fast) var(--easing-standard),
+    background var(--duration-fast) var(--easing-standard),
+    border-color var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.menu__link:hover,
+.menu__link:focus-visible {
   color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.menu__link.is-current {
+  color: var(--text);
+  border-color: var(--accent-line);
+  background: var(--accent-surface);
+}
+
+.menu__link--cta {
+  color: var(--text);
+  border-color: rgba(255, 164, 163, 0.28);
+  background: linear-gradient(180deg, rgba(255, 90, 87, 0.16), rgba(143, 16, 23, 0.26));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.menu__link--cta:hover,
+.menu__link--cta:focus-visible {
+  border-color: rgba(255, 164, 163, 0.44);
+  background: linear-gradient(180deg, rgba(255, 90, 87, 0.24), rgba(143, 16, 23, 0.34));
 }
 
 .menu-toggle {
@@ -104,7 +157,7 @@
   align-items: center;
   gap: 0.55rem;
   margin-left: auto;
-  padding: 0.44rem 0.7rem;
+  padding: 0.44rem 0.74rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.03);
@@ -117,6 +170,12 @@
   cursor: pointer;
 }
 
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  border-color: var(--accent-line);
+  background: var(--accent-surface);
+}
+
 .menu-toggle-icon {
   display: inline-grid;
   gap: 0.18rem;
@@ -127,7 +186,9 @@
   height: 1.5px;
   border-radius: 999px;
   background: currentColor;
-  transition: transform var(--duration-fast) var(--easing-standard), opacity var(--duration-fast) var(--easing-standard);
+  transition:
+    transform var(--duration-fast) var(--easing-standard),
+    opacity var(--duration-fast) var(--easing-standard);
 }
 
 .site-header.is-menu-open .menu-toggle-icon span:nth-child(1) {
@@ -142,6 +203,12 @@
   transform: translateY(-3.5px) rotate(-45deg);
 }
 
+@media (max-width: 980px) {
+  .brand-chip {
+    display: none;
+  }
+}
+
 @media (max-width: 920px) {
   .brand-tag {
     display: none;
@@ -152,16 +219,21 @@
   }
 
   .site-nav {
-    width: 100%;
+    width: min(var(--max-width-wide), calc(100vw - (2 * var(--page-gutter))));
     position: absolute;
-    top: calc(100% + 1px);
+    top: calc(100% + 0.75rem);
     left: 0;
     right: 0;
-    margin-left: 0;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(165, 203, 242, 0.12);
-    background: rgba(6, 11, 18, 0.94);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius-lg) - 2px);
+    background:
+      linear-gradient(180deg, rgba(241, 31, 42, 0.08), rgba(255, 255, 255, 0.02)),
+      rgba(12, 8, 9, 0.96);
     backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-panel);
   }
 
   .site-header.menu-enhanced .site-nav[hidden] {
@@ -171,18 +243,26 @@
   .menu {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.2rem;
-    width: min(var(--max-width-wide), calc(100% - (2 * var(--page-gutter))));
-    margin: 0 auto;
+    gap: 0.34rem;
   }
 
   .menu li,
-  .menu a {
+  .menu__link {
     width: 100%;
   }
 
-  .menu a {
-    padding: 0.45rem 0;
+  .menu__link {
+    justify-content: space-between;
+    min-height: 2.9rem;
+    padding: 0.72rem 0.92rem;
+    font-size: 0.92rem;
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle-icon span,
+  .menu__link,
+  .site-header {
+    transition: none;
+  }
+}
