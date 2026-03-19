@@ -1,0 +1,61 @@
+updated: 2026-03-19
+summary:
+  title: A balanced positioning, not a maturity claim
+  body: >
+    ReDoor is strongest as a transparent architecture statement: untrusted relays, volatile client state,
+    tamper evidence, and explicit metadata-resistance work are first-class design concerns. It is weaker than
+    Signal or WhatsApp on deployment maturity, client ecosystem breadth, and production validation at scale.
+matrix:
+  columns:
+    - ReDoor
+    - Signal
+    - WhatsApp
+    - Telegram
+    - Element / Matrix
+  rows:
+    - dimension: Default message secrecy
+      redoor: X3DH plus Double Ratchet direction with opaque relay transport.
+      signal: Mature Signal Protocol deployment with strong default E2EE.
+      whatsapp: E2EE by default for personal messaging.
+      telegram: Cloud chats are server-mediated; Secret Chats use E2EE.
+      matrix: E2EE is available, but room and deployment posture depend on client and server configuration.
+    - dimension: Relay or server trust minimization
+      redoor: Designed around an explicitly untrusted relay plane.
+      signal: Centralized service still mediates delivery, though metadata retention is minimized.
+      whatsapp: Centralized service model with strong message secrecy but broader platform trust assumptions.
+      telegram: Unified cloud architecture keeps more trust in the service for normal chats.
+      matrix: Federation reduces centralization but homeservers still remain meaningful trust and metadata points.
+    - dimension: Metadata-resistance direction
+      redoor: Cover traffic, strict anonymity mode, rotating mailbox handles, and multi-relay work are explicit tracks.
+      signal: Stronger than most mainstream messengers, with sealed sender and retained-data minimization.
+      whatsapp: Strong default E2EE, but metadata posture is not the primary product identity.
+      telegram: Optimized for cloud sync and reach, not for aggressive metadata minimization by default.
+      matrix: Flexible and open, but federation and room sync patterns can expose more operational metadata.
+    - dimension: Volatile client state
+      redoor: Volatile client-state and wipe flows are core architectural claims.
+      signal: Strong secure-messaging implementation, but not centered on RAM-only product framing.
+      whatsapp: Consumer-friendly persistence and backup posture are part of the product surface.
+      telegram: Cloud-first sync model keeps history broadly available across devices.
+      matrix: Persistence is common because federation and room history are part of the model.
+    - dimension: Tamper evidence
+      redoor: Blockchain-backed commitment layer is a native integrity plane.
+      signal: No public blockchain commitment model.
+      whatsapp: No public blockchain commitment model.
+      telegram: No public blockchain commitment model.
+      matrix: Federation and signing provide integrity properties, but not a dedicated blockchain evidence plane.
+    - dimension: Operational maturity
+      redoor: Early public project with active roadmap and visible controls.
+      signal: Highest trust for security-focused mainstream users.
+      whatsapp: Massive operational scale and broad client support.
+      telegram: Extremely broad reach and feature surface.
+      matrix: Mature open ecosystem with many deployment modes, though harder to operate well.
+recommendations:
+  - audience: Security-conscious individual users
+    recommendation: Signal remains the safer default choice today if production maturity matters more than architectural experimentation.
+  - audience: Researchers and protocol-minded contributors
+    recommendation: ReDoor is the more interesting system if you want to inspect or contribute to an untrusted-relay architecture with explicit hardening work.
+  - audience: Mainstream network-effect users
+    recommendation: WhatsApp wins on reach and interoperability, not on the same trust-minimization philosophy.
+  - audience: Cloud-sync-first communities
+    recommendation: Telegram and Matrix serve different collaboration needs, but neither maps cleanly to ReDoor’s volatile-state and tamper-evidence posture.
+

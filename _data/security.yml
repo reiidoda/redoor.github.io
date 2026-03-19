@@ -1,0 +1,96 @@
+goals:
+  - Protect message confidentiality from infrastructure operators.
+  - Reduce social-graph leakage at the relay boundary.
+  - Keep client-side sensitive state in volatile memory.
+  - Detect tampering or reordering through hash evidence.
+  - Enforce strict transport hardening with TLS, pinning, and auth controls.
+protects:
+  - Relay-host compromise should not reveal plaintext content.
+  - Network replay and malformed-input paths should hit explicit validation gates.
+  - Background, resign, terminate, and duress paths should clear sensitive state.
+  - Security-relevant changes should leave behind tests, docs, telemetry, and rollback notes.
+does_not_claim:
+  - Global passive traffic analysis is fully solved today.
+  - Compromised kernels, basebands, or hardware roots can be defeated by app logic alone.
+  - Hash-only blockchain evidence is metadata-free.
+  - ReDoor is already operationally as mature as the largest deployed messengers.
+status_taxonomy:
+  implemented:
+    - title: Transport and relay hardening
+      detail: TLS relay posture, optional HMAC auth, anti-replay checks, fetch-once normal blobs, and abuse controls.
+    - title: Volatile state model
+      detail: RAM-only policy direction in the iOS app plus runtime wipe and duress handlers.
+    - title: Security process gates
+      detail: Standards profile, release sign-off workflow, security-relevant PR checklist, and reproducibility checks.
+    - title: Metadata-hardening controls
+      detail: Cover traffic, strict anonymity mode, bounded schedule jitter, multi-relay retrieval, and anti-correlation scoring.
+    - title: Zero-click boundary work
+      detail: Untrusted parser isolation boundary, policy allowlist, fail-closed worker lifecycle, and parser-inventory gate.
+    - title: PQ recovery baseline
+      detail: Forced rekey and protocol-version binding are documented as merged production baseline work.
+  in_progress:
+    - title: Standards-aligned auth and validation evidence
+      detail: ASVS V2 and V5 negative-path coverage are still marked partial in the control matrix.
+    - title: Mobile resilience evidence
+      detail: MASVS runtime compromise evidence is active work rather than closed status.
+    - title: Managed key custody
+      detail: Provider-backed hooks exist, but managed or hardware-backed signing and audit coverage remain partial.
+    - title: PIR or proxy deployability
+      detail: PIR or proxy retrieval remains an opt-in research track gated by tasks #23 to #26.
+  planned:
+    - title: Secure enclave backed identity mode
+      detail: Hardware-backed long-lived key storage is listed as a next-step endpoint hardening direction.
+    - title: Optional runtime attestation
+      detail: Service binary or config attestation remains a future operational control.
+    - title: External formal protocol review
+      detail: Formal verification depth and broader external assurance remain part of the longer-term program.
+hardening_tracks:
+  - title: Endpoint hardening
+    detail: Zero-click isolation, parser minimization, lockdown profiles, and memory-hygiene audits.
+  - title: Metadata privacy
+    detail: Route diversity, schedule jitter, mirrored retrieval, and PIR or proxy research.
+  - title: Protocol evolution
+    detail: Explicit PQ policy negotiation, forced rekey, and future triple-ratchet-style recovery work.
+  - title: Operational integrity
+    detail: Reproducible builds, provenance, drill programs, release sign-off, and external audit packaging.
+controls_matrix:
+  - id: SSDF-PO.1
+    name: Release role sign-off workflow
+    status: Implemented
+    owner: Security Lead / Release Lead
+    issue: ""
+  - id: SSDF-PW.4
+    name: Security-relevant PR checklist and control-matrix maintenance
+    status: Implemented
+    owner: Security Lead
+    issue: ""
+  - id: SLSA-BUILD.2
+    name: Build isolation and provenance policy
+    status: Implemented
+    owner: Release Lead
+    issue: ""
+  - id: ASVS-V2
+    name: Auth and access-control negative-path coverage
+    status: In Progress
+    owner: Relay Lead
+    issue: "#38"
+  - id: ASVS-V5
+    name: Replay and malformed-input negative-path coverage
+    status: In Progress
+    owner: Relay Lead
+    issue: "#39"
+  - id: MASVS-RESILIENCE
+    name: Mobile runtime compromise resilience evidence
+    status: In Progress
+    owner: Mobile Lead
+    issue: "#40"
+  - id: KEY-HSM
+    name: Managed or hardware-backed signing and rotation
+    status: In Progress
+    owner: Platform Lead
+    issue: "#15"
+disclosure:
+  policy_url: https://github.com/reiidoda/ReDoor/blob/main/SECURITY.md
+  runbook_url: https://github.com/reiidoda/ReDoor/blob/main/docs/security-runbook.md
+  standards_url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/STANDARDS_PROFILE.md
+

@@ -1,0 +1,25 @@
+- title: Home
+  url: /
+  external: false
+- title: Architecture
+  url: /architecture/
+  external: false
+- title: Security
+  url: /security/
+  external: false
+- title: Compare
+  url: /compare/
+  external: false
+- title: Roadmap
+  url: /roadmap/
+  external: false
+- title: Blog
+  url: /blog/
+  external: false
+- title: Docs
+  url: /docs/
+  external: false
+- title: GitHub
+  url: https://github.com/reiidoda/ReDoor
+  external: true
+

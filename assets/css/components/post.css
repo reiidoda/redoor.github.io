@@ -1,0 +1,41 @@
+.post-shell {
+  display: grid;
+}
+
+.post-hero__inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.post-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.post-nav {
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+}
+
+.post-nav__label {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.post-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.1rem;
+  margin-top: 0.9rem;
+}
+
+.post-nav__links a {
+  text-decoration: none;
+  color: var(--text);
+}
+

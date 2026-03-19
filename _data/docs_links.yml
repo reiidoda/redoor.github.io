@@ -1,0 +1,74 @@
+groups:
+  - title: Start Here
+    items:
+      - label: GitHub repository
+        detail: Canonical source code and issue tracker.
+        url: https://github.com/reiidoda/ReDoor
+        external: true
+      - label: Open source status
+        detail: Current execution board and recent completions.
+        url: /status/
+        external: false
+      - label: Public roadmap
+        detail: Contributor-facing milestone map and active work.
+        url: /roadmap/
+        external: false
+      - label: Security model
+        detail: Threats, control status, and disclosure links.
+        url: /security/
+        external: false
+  - title: Core Design
+    items:
+      - label: Architecture deep dive
+        detail: Runtime planes, message flow, and trust boundaries.
+        url: /architecture/
+        external: false
+      - label: System design
+        detail: Original monorepo system-design document in the upstream repository.
+        url: https://github.com/reiidoda/ReDoor/blob/main/SYSTEM_DESIGN.md
+        external: true
+      - label: Threat model
+        detail: Adversary classes, invariants, accepted risks, and deltas.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/threat_model.md
+        external: true
+      - label: Protocol notes
+        detail: Upstream protocol and design references.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/protocol.md
+        external: true
+  - title: Security Governance
+    items:
+      - label: Standards profile
+        detail: Public baseline for SSDF, ASVS, MASVS, SLSA, and ownership.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/STANDARDS_PROFILE.md
+        external: true
+      - label: Control matrix
+        detail: Security-control status and evidence paths.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/control-matrix.csv
+        external: true
+      - label: Release integrity
+        detail: Reproducibility, provenance, and verification guidance.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/release-integrity.md
+        external: true
+      - label: Security runbook
+        detail: Operational process details and responder guidance.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/security-runbook.md
+        external: true
+  - title: Hardening and Research
+    items:
+      - label: Advanced message security roadmap
+        detail: PQ, metadata, endpoint, and operational hardening direction.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/ADVANCED_MESSAGE_SECURITY.md
+        external: true
+      - label: Zero-click isolation architecture
+        detail: Untrusted parser boundary and fail-closed worker model.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/ENDPOINT_ZERO_CLICK_ISOLATION_ARCHITECTURE.md
+        external: true
+      - label: PQ ratchet evolution
+        detail: Forced rekey baseline and future recovery direction.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/PQ_RATCHET_EVOLUTION_AND_FORCED_REKEY.md
+        external: true
+      - label: Traffic-correlation assessment
+        detail: Public residual-risk statement and mitigation backlog.
+        url: https://github.com/reiidoda/ReDoor/blob/main/docs/security/TRAFFIC_CORRELATION_RED_TEAM_ASSESSMENT.md
+        external: true
+

@@ -1,0 +1,71 @@
+overview:
+  - title: Client runtime
+    detail: >
+      Maintains identity, prekeys, ratchet sessions, route policy, and diagnostics in Rust.
+      Builds encrypted envelopes and exposes FFI to the mobile shell.
+    path: client/
+  - title: iOS application layer
+    detail: >
+      Enforces secure network validation, lifecycle wipe rules, duress flows,
+      and high-risk posture checks before calling into the runtime.
+    path: RedoorApp/
+  - title: Relay transport plane
+    detail: >
+      Terminates TLS, validates HMAC and replay controls, keeps normal blobs in memory,
+      rotates mailbox handles, and applies abuse governance without seeing plaintext.
+    path: relay-node/
+  - title: Directory discovery plane
+    detail: >
+      Publishes and resolves signed key material with TTL prekeys, rate limits,
+      optional auth, and lease or sequence ownership semantics.
+    path: directory-dht/
+  - title: Tamper-evidence plane
+    detail: >
+      Accepts message-hash commitments and signed blocks, persists integrity history on disk,
+      and exposes metrics or admin endpoints with rate and token controls.
+    path: blockchain-node/
+message_flow:
+  - step: 1
+    title: Identity and prekeys
+    detail: Device generates identity keys and prekeys and publishes bundle material through the directory plane.
+  - step: 2
+    title: Directory resolution
+    detail: Sender resolves peer key material and verifies signed directory responses before session setup.
+  - step: 3
+    title: X3DH and ratchet setup
+    detail: Session state is initialized in runtime memory using X3DH and Double Ratchet foundations.
+  - step: 4
+    title: Envelope construction
+    detail: Plaintext is serialized as inner payload, ratchet-encrypted, and wrapped into an opaque envelope.
+  - step: 5
+    title: Relay forwarding
+    detail: Relay receives an opaque blob, indexes it by rotating mailbox handle, and serves fetch-once retrieval paths.
+  - step: 6
+    title: Evidence submission
+    detail: Client best-effort submits message-hash commitments to the blockchain plane for integrity evidence.
+  - step: 7
+    title: In-memory consume and wipe
+    detail: Receiver decrypts in memory and lifecycle rules wipe sensitive state on lock, background, terminate, or duress.
+trust_boundaries:
+  - boundary: Device boundary
+    trusted_for: Plaintext, keys, session state, local policy decisions
+    not_trusted_for: Durable persistence of sensitive runtime material
+    notes: Plaintext should remain in RAM only according to current design intent.
+  - boundary: Relay boundary
+    trusted_for: Transport availability, replay checks, abuse throttling
+    not_trusted_for: Message content confidentiality or social-graph trust
+    notes: Relay sees opaque blobs, timing, and mailbox-level activity.
+  - boundary: Directory boundary
+    trusted_for: Publishing and resolving signed key material
+    not_trusted_for: Blind trust in returned identity data
+    notes: Resolve responses must be signed and verified by clients.
+  - boundary: Blockchain boundary
+    trusted_for: Tamper-evidence history and commitment integrity
+    not_trusted_for: Message secrecy or ciphertext storage
+    notes: Chain stores hashes and linkage metadata, not plaintext messages.
+plaintext_zones:
+  - label: Exists
+    detail: Sender device memory before encryption and receiver device memory after decryption.
+  - label: Does not exist
+    detail: Relay queues, directory responses, and blockchain ledger entries.
+

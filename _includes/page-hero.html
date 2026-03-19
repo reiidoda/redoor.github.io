@@ -1,0 +1,39 @@
+<section class="page-hero section" aria-labelledby="page-title" data-reveal>
+  <div class="shell">
+    {% include breadcrumbs.html %}
+    {% if page.eyebrow %}
+      <p class="section-label">{{ page.eyebrow }}</p>
+    {% endif %}
+    <div class="page-hero__grid">
+      <div class="page-hero__copy">
+        <h1 id="page-title">{{ page.title }}</h1>
+        {% if page.lead %}
+          <p class="page-hero__lead">{{ page.lead }}</p>
+        {% endif %}
+      </div>
+      {% if page.hero_panel %}
+        <aside class="page-hero__panel premium-panel">
+          <p class="page-hero__panel-label">{{ page.hero_panel.label }}</p>
+          <p class="page-hero__panel-value">{{ page.hero_panel.value }}</p>
+          {% if page.hero_panel.detail %}
+            <p class="page-hero__panel-detail">{{ page.hero_panel.detail }}</p>
+          {% endif %}
+        </aside>
+      {% endif %}
+    </div>
+    {% if page.hero_actions %}
+      <div class="cta-group">
+        {% for action in page.hero_actions %}
+          <a
+            class="button {% if action.style == 'primary' %}button-primary{% else %}button-ghost{% endif %}"
+            href="{% if action.external %}{{ action.url }}{% else %}{{ action.url | relative_url }}{% endif %}"
+            {% if action.external %}target="_blank" rel="noopener noreferrer"{% endif %}
+          >
+            {{ action.label }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+

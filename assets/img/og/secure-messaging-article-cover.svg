@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#040A12"/>
+  <circle cx="960" cy="120" r="220" fill="#55B7FF" opacity=".18"/>
+  <circle cx="220" cy="548" r="220" fill="#7C8FFF" opacity=".16"/>
+  <rect x="728" y="122" width="340" height="386" rx="28" fill="#08111B" stroke="#193147"/>
+  <path d="M798 213h200M798 277h200M798 341h140" stroke="#84D7FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M774 192l-32 26 32 26M774 256l-32 26 32 26M774 320l-32 26 32 26" stroke="#55B7FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="188" fill="#84D7FF" font-family="Avenir Next, SF Pro Display, sans-serif" font-size="20" letter-spacing="7">FLAGSHIP ARTICLE</text>
+  <text x="96" y="286" fill="#F6FBFF" font-family="Avenir Next, SF Pro Display, sans-serif" font-size="68" font-weight="700">Why Secure</text>
+  <text x="96" y="362" fill="#F6FBFF" font-family="Avenir Next, SF Pro Display, sans-serif" font-size="68" font-weight="700">Messaging Needs</text>
+  <text x="96" y="438" fill="#F6FBFF" font-family="Avenir Next, SF Pro Display, sans-serif" font-size="68" font-weight="700">More Than E2EE</text>
+  <text x="96" y="512" fill="#94A6BC" font-family="IBM Plex Mono, monospace" font-size="20">metadata / endpoint trust / integrity evidence / relay trust</text>
+</svg>
+

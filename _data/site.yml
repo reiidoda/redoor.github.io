@@ -1,0 +1,34 @@
+name: ReDoor
+tagline: Privacy-first secure messaging with untrusted relays
+description: ReDoor is a privacy-first secure messaging platform that treats relays as untrusted infrastructure, keeps sensitive client state volatile, and builds toward stronger metadata resistance and tamper evidence.
+github_url: https://github.com/reiidoda/ReDoor
+issues_url: https://github.com/reiidoda/ReDoor/issues
+docs_url: https://github.com/reiidoda/ReDoor/tree/main/docs
+repo_docs_base: https://github.com/reiidoda/ReDoor/blob/main
+hero:
+  kicker: Secure Messaging Platform
+  headline: ReDoor
+  subheadline: Privacy-first secure messaging with untrusted relays
+  summary: >
+    Open-source secure messaging architecture built around X3DH and Double Ratchet foundations,
+    relay-blind forwarding, volatile client state, and blockchain-backed tamper evidence.
+footer:
+  note: Open-source secure messaging architecture
+  legal: Built with GitHub Pages and Jekyll.
+  links:
+    - label: GitHub
+      url: https://github.com/reiidoda/ReDoor
+      external: true
+    - label: Security Policy
+      url: https://github.com/reiidoda/ReDoor/blob/main/SECURITY.md
+      external: true
+    - label: Roadmap
+      url: /roadmap/
+      external: false
+    - label: Docs
+      url: /docs/
+      external: false
+    - label: RSS
+      url: /feed.xml
+      external: false
+

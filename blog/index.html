@@ -1,0 +1,86 @@
+---
+title: Blog
+description: ReDoor articles on secure messaging architecture, metadata resistance, endpoint hardening, and project engineering decisions.
+body_class: blog
+schema_type: CollectionPage
+breadcrumbs:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+---
+{% assign featured_post = site.posts | first %}
+<section class="page-hero section" aria-labelledby="blog-title" data-reveal>
+  <div class="shell">
+    {% include breadcrumbs.html %}
+    <p class="section-label">Articles</p>
+    <div class="page-hero__grid">
+      <div class="page-hero__copy">
+        <h1 id="blog-title">Blog</h1>
+        <p class="page-hero__lead">
+          Editorial and technical writing around secure messaging architecture, metadata resistance,
+          protocol engineering, and ReDoor’s public implementation direction.
+        </p>
+      </div>
+      <aside class="page-hero__panel premium-panel">
+        <p class="page-hero__panel-label">Feed</p>
+        <p class="page-hero__panel-value">RSS available</p>
+        <p class="page-hero__panel-detail"><a href="{{ '/feed.xml' | relative_url }}">Subscribe to the feed</a></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="featured-post-title">
+  <div class="shell">
+    {% if featured_post %}
+      <article class="featured-article-card premium-panel" data-reveal>
+        <img
+          src="{{ featured_post.image | default: site.og_image | relative_url }}"
+          alt=""
+          width="1200"
+          height="630"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="featured-article-card__copy">
+          <p class="section-label">Featured</p>
+          <h2 id="featured-post-title">{{ featured_post.title }}</h2>
+          <p>{{ featured_post.description | default: featured_post.excerpt | strip_html | strip }}</p>
+          <div class="cta-group">
+            <a class="button button-primary" href="{{ featured_post.url | relative_url }}">Read article</a>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="blog-list-title">
+  <div class="shell" data-reveal>
+    <div class="filter-bar">
+      <div class="filter-search">
+        <label class="visually-hidden" for="post-search">Search articles</label>
+        <input id="post-search" type="search" placeholder="Search by title, excerpt, or tag" data-post-search>
+      </div>
+      <p class="filter-count" data-post-count>{{ site.posts | size }} article{% if site.posts.size != 1 %}s{% endif %}</p>
+    </div>
+
+    {% assign sorted_tags = site.tags | sort %}
+    {% if sorted_tags.size > 0 %}
+      <ul class="tag-row" aria-label="Blog tags">
+        {% for tag in sorted_tags %}
+          <li><button class="pill pill-button" type="button" data-tag-filter="{{ tag[0] | slugify }}">{{ tag[0] }}</button></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <h2 id="blog-list-title" class="visually-hidden">Article list</h2>
+    <div class="article-grid">
+      {% for post in site.posts %}
+        {% include article-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
