@@ -1,0 +1,58 @@
+current_status:
+  label: Contributor-facing roadmap
+  body: >
+    ReDoor’s public roadmap centers on standards-aligned hardening, key custody, privacy-track execution,
+    and enterprise service-plane work. The live status board was last synced on 2026-03-19.
+current_focus:
+  - title: Security standards and contributor hardening
+    items:
+      - "#38 Auth hardening: ASVS V2 negative-path coverage for admin and scoped credentials."
+      - "#39 Validation hardening: ASVS V5 replay and malformed-input coverage."
+      - "#40 Mobile hardening: MASVS resilience evidence for runtime compromise conditions."
+  - title: Key management and release hardening
+    items:
+      - "#15 KMS or HSM-backed signing and rotation path."
+  - title: Privacy track execution
+    items:
+      - "#23 PIR or proxy benchmark gates and CI evidence."
+      - "#24 Proxy trust controls and jurisdiction split."
+      - "#25 PIR or proxy abuse controls and response playbooks."
+      - "#26 PIR or proxy pilot rollout and rollback gate."
+  - title: Enterprise M1 execution
+    items:
+      - "#28 OpenAPI contracts and strict request validation."
+      - "#29 mTLS service-plane identity and certificate rotation."
+      - "#30 KMS bootstrap key management and staged rotation framework."
+      - "#31 Security event taxonomy and structured audit-log rollout."
+milestones:
+  - name: M4
+    title: Standards Alignment and Contributor Hardening
+    detail: Closes public-process gaps around SSDF, SLSA, ASVS, and MASVS alignment.
+    status: Active
+  - name: M5
+    title: Privacy and Enterprise Execution
+    detail: Tracks privacy rollout work, key custody, and enterprise service hardening.
+    status: Active
+  - name: M26
+    title: Security Hardening Program v2
+    detail: Public hardening milestone covering zero-click isolation, parser reduction, PQ recovery, and assurance tracks.
+    status: Completed baseline published
+quality_program:
+  - title: Release integrity
+    detail: Deterministic build scripts, reproducibility verification, provenance attestations, and sign-off workflow.
+  - title: Runtime policy gates
+    detail: RAM-only checks, parser-boundary policy, memory regressions, and anonymity regression thresholds.
+  - title: Reliability
+    detail: Nightly soak, reconnect-chaos coverage, and artifact uploads for regressions.
+  - title: Security response
+    detail: Drill program, rollback rehearsal environment, and public security runbook surfaces.
+entry_points:
+  - label: good first issue
+    detail: Small and self-contained onboarding work.
+  - label: help wanted
+    detail: Maintainers explicitly want external contribution.
+  - label: documentation
+    detail: Docs or process changes tied to behavior and contributor workflow.
+  - label: enhancement
+    detail: Implementation work that advances roadmap delivery.
+

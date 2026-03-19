@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<article class="post-shell">
+  <section class="post-hero section" data-reveal>
+    <div class="shell post-hero__inner">
+      {% include breadcrumbs.html %}
+      <p class="section-label">Article</p>
+      <h1 id="page-title">{{ page.title }}</h1>
+      <p class="post-hero__lead">{{ page.description | default: page.excerpt | strip_html | strip }}</p>
+      <div class="post-hero__meta">
+        <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+        <span>{{ page.read_time | default: "6 min read" }}</span>
+        {% if page.tags and page.tags.size > 0 %}
+          <span>{{ page.tags | join: " · " }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="post-content" data-reveal>
+        {{ content }}
+      </div>
+      <div class="post-nav premium-panel" data-reveal>
+        <p class="post-nav__label">Continue</p>
+        <div class="post-nav__links">
+          <a href="{{ '/architecture/' | relative_url }}">Architecture</a>
+          <a href="{{ '/security/' | relative_url }}">Security</a>
+          <a href="{{ '/compare/' | relative_url }}">Compare</a>
+          <a href="{{ site.data.site.github_url }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+

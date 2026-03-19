@@ -1,0 +1,210 @@
+---
+title: ReDoor
+description: ReDoor is an open-source privacy-first secure messaging platform built around untrusted relays, X3DH and Double Ratchet foundations, volatile client state, metadata-resistance work, and blockchain-backed tamper evidence.
+body_class: home
+keywords:
+  - privacy-first secure messaging
+  - untrusted relay messaging
+  - secure messaging architecture
+  - tamper-evident messaging
+---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell-wide hero__grid">
+    <div class="hero__copy" data-reveal>
+      <p class="hero__eyebrow">{{ site.data.site.hero.kicker }}</p>
+      <h1 class="hero__headline" id="hero-title">
+        {{ site.data.site.hero.headline }}
+        <span>{{ site.data.site.hero.subheadline }}</span>
+      </h1>
+      <p class="hero__summary">{{ site.data.site.hero.summary }}</p>
+
+      <div class="cta-group">
+        <a class="button button-primary" href="{{ site.data.homepage.hero.primary_cta.url | relative_url }}">{{ site.data.homepage.hero.primary_cta.label }}</a>
+        <a class="button button-ghost" href="{{ site.data.homepage.hero.secondary_cta.url }}" target="_blank" rel="noopener noreferrer">{{ site.data.homepage.hero.secondary_cta.label }}</a>
+        <a class="button button-ghost" href="{{ site.data.homepage.hero.tertiary_cta.url | relative_url }}">{{ site.data.homepage.hero.tertiary_cta.label }}</a>
+      </div>
+
+      <ul class="hero-links" aria-label="Primary destinations">
+        <li><a href="{{ '/compare/' | relative_url }}">Compare ReDoor</a></li>
+        <li><a href="{{ '/roadmap/' | relative_url }}">Public roadmap</a></li>
+        <li><a href="{{ '/docs/' | relative_url }}">Documentation hub</a></li>
+        <li><a href="{{ site.data.site.github_url }}" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+      </ul>
+
+      <div class="metric-strip" data-reveal>
+        {% for item in site.data.homepage.hero.callouts %}
+          <article class="stat-card">
+            <p class="stat-card__label">{{ item.label }}</p>
+            <p class="stat-card__value">{{ item.value }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="hero-visual" data-reveal>
+      <div class="hero-network">
+        <p class="hero-network__label">Five runtime planes</p>
+        <div class="hero-network__path" aria-hidden="true"></div>
+        <span class="hero-network__pulse hero-network__pulse--one" aria-hidden="true"></span>
+        <span class="hero-network__pulse hero-network__pulse--two" aria-hidden="true"></span>
+
+        <article class="hero-node hero-node--client">
+          <p class="hero-node__eyebrow">Edge trust</p>
+          <h2 class="hero-node__title">Client runtime</h2>
+          <p class="hero-node__detail">Identity, prekeys, ratchet state, route policy, diagnostics, and FFI.</p>
+        </article>
+
+        <article class="hero-node hero-node--ios">
+          <p class="hero-node__eyebrow">Mobile shell</p>
+          <h2 class="hero-node__title">iOS app</h2>
+          <p class="hero-node__detail">Lifecycle wipe rules, secure network validation, and high-risk posture checks.</p>
+        </article>
+
+        <article class="hero-node hero-node--relay">
+          <p class="hero-node__eyebrow">Untrusted middle</p>
+          <h2 class="hero-node__title">Relay node</h2>
+          <p class="hero-node__detail">TLS, HMAC, anti-replay, opaque fetch-once blobs, and abuse controls.</p>
+        </article>
+
+        <article class="hero-node hero-node--directory">
+          <p class="hero-node__eyebrow">Discovery</p>
+          <h2 class="hero-node__title">Directory DHT</h2>
+          <p class="hero-node__detail">Signed key resolution, TTL prekeys, rate limits, and ownership semantics.</p>
+        </article>
+
+        <article class="hero-node hero-node--chain">
+          <p class="hero-node__eyebrow">Integrity</p>
+          <h2 class="hero-node__title">Blockchain node</h2>
+          <p class="hero-node__detail">Commitment ledger for tamper evidence without storing plaintext on-chain.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="differentiators-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Core Differentiators</p>
+      <h2 id="differentiators-title">A technical product site for a protocol-shaped system.</h2>
+      <p>
+        ReDoor is not presented as a generic chat app. The public-facing site centers on its actual trust posture:
+        untrusted transport, volatile client behavior, integrity evidence, and explicit hardening work.
+      </p>
+    </div>
+
+    <div class="card-grid" data-reveal>
+      {% for item in site.data.homepage.differentiators %}
+        <article class="feature-card">
+          <p class="feature-card__label">Why it matters</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.detail }}</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="{{ item.url | relative_url }}">Read more</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="architecture-glance-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Architecture At A Glance</p>
+      <h2 id="architecture-glance-title">{{ site.data.homepage.architecture_summary.title }}</h2>
+      <p>{{ site.data.homepage.architecture_summary.summary }}</p>
+    </div>
+
+    <div class="callout-grid" data-reveal>
+      {% for bullet in site.data.homepage.architecture_summary.bullets %}
+        <article class="callout premium-panel">
+          <p>{{ bullet }}</p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="stack-strip" data-reveal>
+      {% for item in site.data.homepage.stack_strip %}
+        <article class="stack-card">
+          <p class="stack-card__path">{{ item.path }}</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.detail }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="roadmap-teaser-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Execution Surface</p>
+      <h2 id="roadmap-teaser-title">{{ site.data.homepage.roadmap_teaser.title }}</h2>
+      <p>
+        Roadmap and status pages mirror the current upstream docs rather than hiding implementation maturity.
+        That keeps the project credible for contributors and security-minded readers.
+      </p>
+    </div>
+
+    <div class="roadmap-grid" data-reveal>
+      {% for item in site.data.homepage.roadmap_teaser.items %}
+        <article class="roadmap-card">
+          <p class="roadmap-card__label">Milestone track</p>
+          <h3>{{ item.milestone }}</h3>
+          <p>{{ item.detail }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="featured-article-title">
+  <div class="shell" data-reveal>
+    <article class="featured-article-card premium-panel">
+      <img
+        src="{{ '/assets/img/og/secure-messaging-article-cover.svg' | relative_url }}"
+        alt="Editorial cover for the flagship ReDoor article"
+        width="1200"
+        height="630"
+        loading="lazy"
+        decoding="async"
+      >
+      <div class="featured-article-card__copy">
+        <p class="section-label">Featured Article</p>
+        <h2 id="featured-article-title">{{ site.data.homepage.featured_article.title }}</h2>
+        <p>{{ site.data.homepage.featured_article.description }}</p>
+        <div class="cta-group">
+          <a class="button button-primary" href="{{ site.data.homepage.featured_article.url | relative_url }}">Read article</a>
+          <a class="button button-ghost" href="{{ '/blog/' | relative_url }}">Open blog</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="trust-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Trust Surfaces</p>
+      <h2 id="trust-title">Credibility comes from public engineering surfaces.</h2>
+      <p>
+        Source, roadmap, security policy, and status are all first-class navigation paths. The website is meant to
+        route readers into the repo, not replace it.
+      </p>
+    </div>
+
+    <div class="card-grid" data-reveal>
+      {% for item in site.data.homepage.trust_links %}
+        <article class="doc-card">
+          <p class="doc-card__label">Trust surface</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.detail }}</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.title }}</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

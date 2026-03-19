@@ -1,0 +1,68 @@
+:root {
+  --bg: #040a12;
+  --bg-alt: #08111b;
+  --surface: rgba(10, 16, 26, 0.82);
+  --surface-strong: #0d1725;
+  --surface-muted: rgba(12, 21, 33, 0.62);
+  --panel-top: rgba(142, 211, 255, 0.08);
+  --panel-bottom: rgba(255, 255, 255, 0.015);
+  --text: #f6fbff;
+  --text-soft: #d9e4f1;
+  --muted: #94a6bc;
+  --muted-strong: #b3c2d4;
+  --accent: #84d7ff;
+  --accent-strong: #55b7ff;
+  --accent-soft: rgba(132, 215, 255, 0.16);
+  --violet-soft: rgba(124, 143, 255, 0.16);
+  --line: rgba(165, 203, 242, 0.16);
+  --line-strong: rgba(165, 203, 242, 0.28);
+  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.26);
+  --shadow-panel: 0 28px 90px rgba(0, 0, 0, 0.34);
+  --shadow-glow: 0 0 40px rgba(132, 215, 255, 0.12);
+
+  --font-ui: "Neue Montreal", "Avenir Next", "SF Pro Display", "Segoe UI", sans-serif;
+  --font-copy: "Suisse Intl", "Avenir Next", "SF Pro Text", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  --text-xs: 0.76rem;
+  --text-sm: 0.88rem;
+  --text-md: 1rem;
+  --text-lg: 1.08rem;
+  --text-xl: 1.3rem;
+  --display-xl: clamp(2.8rem, 7vw, 6rem);
+  --display-lg: clamp(2rem, 4vw, 3.3rem);
+  --display-md: clamp(1.5rem, 3vw, 2.1rem);
+
+  --leading-tight: 1.14;
+  --leading-regular: 1.62;
+
+  --space-1: 0.2rem;
+  --space-2: 0.45rem;
+  --space-3: 0.68rem;
+  --space-4: 0.9rem;
+  --space-5: 1.15rem;
+  --space-6: 1.45rem;
+  --space-7: 1.8rem;
+  --space-8: 2.3rem;
+  --space-9: 3rem;
+  --space-10: 4rem;
+  --space-11: 5.5rem;
+  --space-12: 7rem;
+
+  --max-width: 1120px;
+  --max-width-wide: 1280px;
+  --page-gutter: clamp(1rem, 3.4vw, 2.6rem);
+  --header-height: 66px;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+
+  --duration-fast: 0.18s;
+  --duration-mid: 0.45s;
+  --duration-slow: 1.1s;
+  --easing-standard: cubic-bezier(0.2, 0.82, 0.2, 1);
+}
+

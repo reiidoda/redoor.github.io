@@ -1,0 +1,59 @@
+source_of_truth:
+  canonical_tracker: https://github.com/reiidoda/ReDoor/issues
+  last_synced: 2026-03-19
+  update_owner: maintainers
+recently_completed:
+  - "#1 iOS runtime wiring now uses real Rust FFI and production stub linkage is guarded in CI."
+  - "#2 Relay connection metrics now expose runtime-derived values in FFI with tests."
+  - "#4 Active workflows now use current action versions compatible with the Node 24 transition."
+  - "#5 Enterprise M1 was decomposed into scoped implementation issues (#28 to #31)."
+  - "#6 PIR or proxy graduation planning was documented and split into follow-up tasks (#23 to #26)."
+  - "#14 Fuzz matrix and nightly coverage tracking were expanded."
+  - "#16 Relay and directory anomaly detection plus response-playbook linkage were added."
+  - "#35 Release role sign-off workflow and fallback delegate policy were documented."
+  - "#36 Security-relevant PR checklist enforcement and control-matrix maintenance were added."
+  - "#37 Build-isolation assumptions, provenance requirements, and release blockers were documented."
+active_work:
+  - title: Standards alignment and contributor hardening
+    items:
+      - "#38 Auth hardening: ASVS-V2 mapped tests for admin and scoped credentials."
+      - "#39 Validation hardening: ASVS-V5 replay and malformed-input negative-path coverage."
+      - "#40 Mobile hardening: MASVS resilience evidence for runtime compromise conditions."
+  - title: Key management and release hardening
+    items:
+      - "#15 KMS or HSM-backed signing and rotation path."
+  - title: Privacy track
+    items:
+      - "#23 PIR or proxy benchmark gates and CI evidence."
+      - "#24 Proxy trust controls and jurisdiction split model."
+      - "#25 PIR or proxy abuse controls and response playbooks."
+      - "#26 PIR or proxy pilot rollout and rollback gate."
+  - title: Enterprise M1 execution
+    items:
+      - "#28 OpenAPI contracts and strict request validation."
+      - "#29 mTLS service-plane identity and certificate rotation."
+      - "#30 KMS bootstrap key management and staged rotation framework."
+      - "#31 Security event taxonomy and structured audit-log rollout."
+control_summary:
+  - id: SSDF-PO.1
+    name: Release role sign-off workflow
+    status: Implemented
+  - id: SSDF-PW.4
+    name: PR checklist and control-matrix maintenance
+    status: Implemented
+  - id: SLSA-BUILD.2
+    name: Build isolation and provenance policy
+    status: Implemented
+  - id: ASVS-V2
+    name: Auth and access-control negative-path coverage
+    status: Partial
+  - id: ASVS-V5
+    name: Replay and malformed-input coverage
+    status: Partial
+  - id: MASVS-RESILIENCE
+    name: Mobile runtime compromise resilience
+    status: Partial
+  - id: KEY-HSM
+    name: Managed signing and rotation
+    status: Partial
+

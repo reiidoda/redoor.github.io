@@ -1,0 +1,134 @@
+{% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
+{% assign raw_description = page.description | default: page.excerpt | default: site.description %}
+{% assign computed_description = raw_description | strip_html | strip_newlines | replace: '  ', ' ' | strip %}
+{% assign page_image = page.image | default: site.og_image %}
+{% assign page_image_prefix = page_image | slice: 0, 4 %}
+{% if page_image_prefix != 'http' %}
+  {% assign page_image = page_image | absolute_url %}
+{% endif %}
+{% assign logo_url = site.logo | absolute_url %}
+{% assign modified_date = page.last_modified_at | default: page.date | default: site.time %}
+{% assign repo_url = site.data.site.github_url %}
+{% assign breadcrumbs = page.breadcrumbs %}
+{% if breadcrumbs == nil %}
+  {% assign breadcrumbs = "" | split: "" %}
+{% endif %}
+
+<title>{{ page.tab_title | default: page.title | default: site.title | escape }}</title>
+{% seo title=false %}
+
+{% if page.noindex or page.sitemap == false %}
+  <meta name="robots" content="noindex, nofollow">
+{% else %}
+  <meta name="robots" content="index, follow">
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ logo_url | jsonify }}
+    },
+    "sameAs": {{ site.social.links | jsonify }}
+  }
+</script>
+
+{% if page.url == '/' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ site.lang | jsonify }},
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }},
+        "url": {{ '/' | absolute_url | jsonify }}
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": {{ site.title | jsonify }},
+      "codeRepository": {{ repo_url | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "description": {{ computed_description | jsonify }},
+      "programmingLanguage": ["Rust", "Swift", "Go"],
+      "license": "https://opensource.org/licenses/MIT"
+    }
+  </script>
+{% elsif page.layout == 'post' or page.collection == 'posts' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ computed_description | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ modified_date | date_to_xmlschema | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "mainEntityOfPage": {{ canonical_url | jsonify }},
+      "author": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }},
+        "url": {{ repo_url | jsonify }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ logo_url | jsonify }}
+        }
+      },
+      "inLanguage": {{ site.lang | jsonify }},
+      "image": {{ page_image | jsonify }}{% if page.tags and page.tags.size > 0 %},
+      "keywords": {{ page.tags | join: ', ' | jsonify }}{% endif %}
+    }
+  </script>
+{% else %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": {{ page.schema_type | default: 'WebPage' | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "description": {{ computed_description | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "mainEntityOfPage": {{ canonical_url | jsonify }},
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": {{ site.title | jsonify }},
+        "url": {{ '/' | absolute_url | jsonify }}
+      }{% if page.keywords %},
+      "keywords": {{ page.keywords | join: ', ' | jsonify }}{% endif %}
+    }
+  </script>
+{% endif %}
+
+{% if breadcrumbs.size > 0 %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {% for crumb in breadcrumbs %}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "name": {{ crumb.title | jsonify }},
+            "item": {{ crumb.url | absolute_url | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  </script>
+{% endif %}
+

@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="shell-wide footer-shell">
+    <div class="footer-meta-row">
+      <div>
+        <p class="footer-copy">© {{ 'now' | date: '%Y' }} ReDoor</p>
+        <p class="footer-note">{{ site.data.site.footer.note }}</p>
+      </div>
+      <p class="footer-status">Open-source secure messaging architecture with public status and roadmap.</p>
+    </div>
+
+    <nav aria-label="Footer links">
+      <ul class="footer-links">
+        {% for item in site.data.site.footer.links %}
+          <li>
+            <a
+              href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"
+              {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <p class="footer-legal">{{ site.data.site.footer.legal }}</p>
+  </div>
+</footer>
+

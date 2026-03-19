@@ -1,0 +1,96 @@
+hero:
+  primary_cta:
+    label: Read Architecture
+    url: /architecture/
+  secondary_cta:
+    label: View on GitHub
+    url: https://github.com/reiidoda/ReDoor
+    external: true
+  tertiary_cta:
+    label: Read Security Model
+    url: /security/
+  callouts:
+    - label: Protocol baseline
+      value: X3DH + Double Ratchet
+    - label: Relay posture
+      value: Untrusted, fetch-once transport
+    - label: State policy
+      value: Volatile client runtime
+    - label: Integrity plane
+      value: Blockchain commitments
+stack_strip:
+  - title: Client runtime
+    path: client/
+    detail: Rust cryptographic engine, transport clients, diagnostics, FFI.
+  - title: iOS app
+    path: RedoorApp/
+    detail: SwiftUI shell with lifecycle wipes and secure-network validation.
+  - title: Relay node
+    path: relay-node/
+    detail: TLS relay with HMAC, replay defense, in-memory queues, abuse controls.
+  - title: Directory DHT
+    path: directory-dht/
+    detail: Signed key resolution, TTL prekeys, sequence and lease ownership.
+  - title: Blockchain node
+    path: blockchain-node/
+    detail: Commitment ledger for tamper evidence without plaintext storage.
+differentiators:
+  - title: Relay-blind forwarding
+    detail: >
+      ReDoor’s relay is transport-only. It stores opaque blobs in memory, validates transport controls,
+      and is intentionally not trusted with plaintext content.
+    url: /architecture/
+  - title: Volatile client state
+    detail: >
+      Sensitive runtime state stays in memory and is explicitly wiped on background, resign, terminate,
+      and duress flows in the current design.
+    url: /security/
+  - title: Metadata-resistance direction
+    detail: >
+      Strict anonymity mode, cover traffic, bounded schedule jitter, rotating mailbox handles,
+      and multi-relay retrieval are treated as an ongoing engineering track rather than a slogan.
+    url: /compare/
+  - title: Tamper evidence without plaintext
+    detail: >
+      Hash commitments go to the blockchain evidence plane while plaintext and ciphertext stay off-chain.
+    url: /architecture/
+architecture_summary:
+  title: Architecture at a glance
+  summary: >
+    The product splits into five runtime planes: client, iOS shell, relay transport, directory discovery,
+    and evidence submission. Each plane has a narrow responsibility and a specific trust boundary.
+  bullets:
+    - Plaintext should exist only inside the device boundary.
+    - Relay transport is untrusted and content-blind.
+    - Directory responses must be signed and verified.
+    - The blockchain plane records commitments for integrity, not secrecy.
+roadmap_teaser:
+  title: Public execution surface
+  items:
+    - milestone: Standards and contributor hardening
+      detail: ASVS and MASVS evidence expansion across auth, validation, and mobile runtime posture.
+    - milestone: Key custody and release integrity
+      detail: Managed or hardware-backed signing, reproducibility, provenance, and release sign-off.
+    - milestone: Privacy track execution
+      detail: PIR or proxy retrieval research, trust controls, abuse governance, and rollout gates.
+featured_article:
+  title: Why Secure Messaging Needs More Than End-to-End Encryption
+  url: /blog/why-secure-messaging-needs-more-than-e2ee/
+  description: >
+    A technical editorial on why ciphertext secrecy is not enough without metadata resistance,
+    endpoint hardening, and evidence-backed integrity controls.
+trust_links:
+  - title: Source code
+    detail: The public monorepo is the primary credibility surface.
+    url: https://github.com/reiidoda/ReDoor
+    external: true
+  - title: Security docs
+    detail: Threat model, standards profile, and control matrix are public.
+    url: /security/
+  - title: Roadmap
+    detail: Contributor-facing milestones and active public work stay visible.
+    url: /roadmap/
+  - title: Status board
+    detail: The project publishes recently completed work and current priorities.
+    url: /status/
+

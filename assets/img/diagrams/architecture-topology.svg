@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" fill="none">
+  <rect width="1280" height="760" rx="32" fill="#07111B"/>
+  <rect x="88" y="190" width="256" height="160" rx="28" fill="#0D1725" stroke="#284156"/>
+  <rect x="88" y="414" width="256" height="160" rx="28" fill="#0D1725" stroke="#284156"/>
+  <rect x="512" y="292" width="256" height="176" rx="28" fill="#0D1725" stroke="#4A7AA0"/>
+  <rect x="936" y="152" width="256" height="160" rx="28" fill="#0D1725" stroke="#284156"/>
+  <rect x="936" y="448" width="256" height="160" rx="28" fill="#0D1725" stroke="#284156"/>
+  <path d="M344 270H512" stroke="#84D7FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M344 494H512" stroke="#84D7FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M768 352H936" stroke="#84D7FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M768 408H936" stroke="#84D7FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M760 352l24-16v32l-24-16z" fill="#84D7FF"/>
+  <path d="M760 408l24-16v32l-24-16z" fill="#84D7FF"/>
+  <text x="130" y="240" fill="#84D7FF" font-family="Avenir Next, sans-serif" font-size="20" letter-spacing="4">APP SHELL</text>
+  <text x="130" y="288" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="36" font-weight="700">iOS App</text>
+  <text x="130" y="332" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">Lifecycle enforcement</text>
+  <text x="130" y="364" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">Network validation</text>
+  <text x="130" y="464" fill="#84D7FF" font-family="Avenir Next, sans-serif" font-size="20" letter-spacing="4">CLIENT PLANE</text>
+  <text x="130" y="512" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="36" font-weight="700">Rust Runtime</text>
+  <text x="130" y="556" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">X3DH / Double Ratchet</text>
+  <text x="130" y="588" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">Volatile state and policy</text>
+  <text x="560" y="342" fill="#84D7FF" font-family="Avenir Next, sans-serif" font-size="20" letter-spacing="4">UNTRUSTED MIDDLE LAYER</text>
+  <text x="560" y="392" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="40" font-weight="700">Relay Node</text>
+  <text x="560" y="438" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">TLS, HMAC, replay defense</text>
+  <text x="560" y="470" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">Fetch-once opaque blobs</text>
+  <text x="978" y="202" fill="#84D7FF" font-family="Avenir Next, sans-serif" font-size="20" letter-spacing="4">DISCOVERY</text>
+  <text x="978" y="250" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="36" font-weight="700">Directory DHT</text>
+  <text x="978" y="294" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">Signed key resolution</text>
+  <text x="978" y="498" fill="#84D7FF" font-family="Avenir Next, sans-serif" font-size="20" letter-spacing="4">EVIDENCE</text>
+  <text x="978" y="546" fill="#F6FBFF" font-family="Avenir Next, sans-serif" font-size="36" font-weight="700">Blockchain Node</text>
+  <text x="978" y="590" fill="#D9E4F1" font-family="Avenir Next, sans-serif" font-size="24">Hash commitments only</text>
+</svg>
+
