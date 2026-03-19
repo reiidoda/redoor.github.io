@@ -20,7 +20,12 @@ const softFailureHosts = new Set([
   "twitter.com",
   "www.twitter.com",
 ]);
-const sameSiteHosts = new Set(["redoor.github.io", "www.redoor.github.io"]);
+const sameSiteHosts = new Set([
+  "redoor.github.io",
+  "www.redoor.github.io",
+  "reiidoda.github.io",
+  "www.reiidoda.github.io",
+]);
 
 const concurrency = 6;
 const retries = 2;

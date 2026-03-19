@@ -119,7 +119,22 @@ function stripQueryAndHash(ref) {
 
 function resolveTarget(ref, sourceFile) {
   if (ref.startsWith("/")) {
-    return path.resolve(siteRoot, `.${ref}`);
+    const direct = path.resolve(siteRoot, `.${ref}`);
+    if (targetExists(direct)) {
+      return direct;
+    }
+
+    const segments = ref.split("/").filter(Boolean);
+    if (segments.length === 1) {
+      return siteRoot;
+    }
+
+    if (segments.length > 1) {
+      const stripped = `/${segments.slice(1).join("/")}`;
+      return path.resolve(siteRoot, `.${stripped}`);
+    }
+
+    return direct;
   }
 
   return path.resolve(path.dirname(sourceFile), ref);

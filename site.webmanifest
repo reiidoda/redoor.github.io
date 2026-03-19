@@ -1,14 +1,18 @@
+---
+layout: null
+permalink: /site.webmanifest
+---
 {
   "name": "ReDoor",
   "short_name": "ReDoor",
   "description": "Privacy-first secure messaging with untrusted relays",
-  "start_url": "/",
+  "start_url": "{{ '/' | relative_url }}",
   "display": "standalone",
   "background_color": "#040a12",
   "theme_color": "#040a12",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "{{ '/favicon.svg' | relative_url }}",
       "sizes": "any",
       "type": "image/svg+xml"
     }

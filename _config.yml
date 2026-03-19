@@ -1,8 +1,8 @@
 title: ReDoor
 name: ReDoor
 description: ReDoor is an open-source privacy-first secure messaging platform built around untrusted relays, X3DH and Double Ratchet foundations, volatile client state, metadata-resistance work, and blockchain-backed tamper evidence.
-url: "https://redoor.github.io"
-baseurl: ""
+url: "https://reiidoda.github.io"
+baseurl: "/redoor.github.io"
 lang: en
 og_image: "/assets/img/og/redoor-site-cover.svg"
 logo: "/favicon.svg"
@@ -57,4 +57,3 @@ defaults:
     values:
       layout: post
       image: /assets/img/og/secure-messaging-article-cover.svg
-

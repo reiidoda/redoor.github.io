@@ -95,6 +95,23 @@ function startStaticServer(rootDir, options = {}) {
 }
 
 function resolveRequestPath(rootDir, requestPathname) {
+  const direct = resolveWithinRoot(rootDir, requestPathname);
+  if (direct && fs.existsSync(direct)) {
+    return direct;
+  }
+
+  const stripped = stripFirstSegment(requestPathname);
+  if (stripped) {
+    const fallback = resolveWithinRoot(rootDir, stripped);
+    if (fallback && fs.existsSync(fallback)) {
+      return fallback;
+    }
+  }
+
+  return direct;
+}
+
+function resolveWithinRoot(rootDir, requestPathname) {
   const normalized = path.normalize(requestPathname).replace(/^(\.\.(\/|\\|$))+/, "");
   const safeRelative = normalized.startsWith(path.sep) ? normalized.slice(1) : normalized;
   const candidate = path.resolve(rootDir, safeRelative || "index.html");
@@ -104,6 +121,15 @@ function resolveRequestPath(rootDir, requestPathname) {
   }
 
   return candidate;
+}
+
+function stripFirstSegment(requestPathname) {
+  const segments = requestPathname.split("/").filter(Boolean);
+  if (segments.length <= 1) {
+    return "";
+  }
+
+  return `/${segments.slice(1).join("/")}${requestPathname.endsWith("/") ? "/" : ""}`;
 }
 
 module.exports = {
