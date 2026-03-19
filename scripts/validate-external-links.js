@@ -21,8 +21,6 @@ const softFailureHosts = new Set([
   "www.twitter.com",
 ]);
 const sameSiteHosts = new Set([
-  "redoor.github.io",
-  "www.redoor.github.io",
   "reiidoda.github.io",
   "www.reiidoda.github.io",
 ]);

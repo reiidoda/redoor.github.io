@@ -1,5 +1,5 @@
 {
-  "name": "redoor-github-io",
+  "name": "redoor-site",
   "version": "1.0.0",
   "private": true,
   "description": "Validation and quality tooling for the ReDoor project website",
@@ -24,4 +24,3 @@
     "pngjs": "^7.0.0"
   }
 }
-
