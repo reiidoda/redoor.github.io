@@ -163,7 +163,7 @@ blockquote {
 
 .section-intro {
   max-width: 70ch;
-  margin-bottom: clamp(1.3rem, 2vw, 2rem);
+  margin-bottom: var(--space-stack);
 }
 
 .section-label {
@@ -193,19 +193,19 @@ blockquote {
 
 .page-grid {
   display: grid;
-  gap: var(--space-8);
+  gap: var(--space-stack);
 }
 
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-  gap: clamp(1.4rem, 3vw, 2.4rem);
+  gap: var(--space-stack);
 }
 
 .three-column {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 2.2vw, 1.4rem);
+  gap: var(--space-block);
 }
 
 .premium-panel {
@@ -292,7 +292,7 @@ blockquote {
 .roadmap-grid,
 .callout-grid {
   display: grid;
-  gap: clamp(1rem, 2vw, 1.4rem);
+  gap: var(--space-block);
 }
 
 .metric-strip {
@@ -351,7 +351,7 @@ blockquote {
 }
 
 .callout {
-  padding: var(--space-6);
+  padding: var(--panel-padding);
 }
 
 .quote-panel {

@@ -5,7 +5,7 @@ url: "https://reiidoda.github.io"
 baseurl: "/redoor-site"
 lang: en
 og_image: "/assets/img/og/redoor-site-cover.svg"
-logo: "/favicon.svg"
+logo: "/assets/img/brand/redoor-mark.svg"
 timezone: Europe/Rome
 
 author:

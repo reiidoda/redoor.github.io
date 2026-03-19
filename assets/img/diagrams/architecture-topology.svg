@@ -1,66 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" fill="none">
   <style>
-    .pulse-line { animation: dash 8s linear infinite; }
-    .relay-glow { animation: relayGlow 5s ease-in-out infinite; }
-    .node-pulse { animation: nodePulse 6s ease-in-out infinite; }
+    .flow-path { animation: dash 11s linear infinite; }
+    .flow-node { animation: nodePulse 6s ease-in-out infinite; }
+    .card-breathe {
+      animation: cardBreathe 9s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
     @keyframes dash {
       from { stroke-dashoffset: 0; }
-      to { stroke-dashoffset: -34; }
-    }
-    @keyframes relayGlow {
-      0%, 100% { opacity: .72; }
-      50% { opacity: 1; }
+      to { stroke-dashoffset: -46; }
     }
     @keyframes nodePulse {
-      0%, 100% { opacity: .92; }
-      50% { opacity: .72; }
+      0%, 100% { opacity: .76; }
+      50% { opacity: 1; }
+    }
+    @keyframes cardBreathe {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-2px); }
     }
   </style>
-  <rect width="1280" height="760" rx="32" fill="#0A0607"/>
-  <rect x="64" y="92" width="340" height="576" rx="34" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.08)"/>
-  <rect x="438" y="132" width="404" height="496" rx="36" fill="rgba(241,31,42,0.04)" stroke="rgba(241,31,42,0.18)"/>
-  <rect x="876" y="92" width="340" height="576" rx="34" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.08)"/>
-  <text x="96" y="138" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="5.2">TRUSTED EDGE</text>
-  <text x="486" y="138" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="5.2">UNTRUSTED RELAY</text>
-  <text x="908" y="138" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="5.2">SUPPORT PLANES</text>
-  <rect x="104" y="188" width="260" height="164" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="node-pulse"/>
-  <rect x="104" y="408" width="260" height="164" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="node-pulse"/>
-  <rect x="520" y="216" width="240" height="328" rx="32" fill="#1A1113" stroke="rgba(241,31,42,0.26)"/>
-  <rect x="916" y="188" width="260" height="164" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="node-pulse"/>
-  <rect x="916" y="408" width="260" height="164" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="node-pulse"/>
-  <path d="M364 270h156" stroke="#F11F2A" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 16" class="pulse-line"/>
-  <path d="M364 490h156" stroke="#F11F2A" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 16" class="pulse-line"/>
-  <path d="M760 300h156" stroke="#F11F2A" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 16" class="pulse-line"/>
-  <path d="M760 456h156" stroke="#F11F2A" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 16" class="pulse-line"/>
-  <circle cx="516" cy="270" r="9" fill="#FF5A57" class="relay-glow"/>
-  <circle cx="516" cy="490" r="9" fill="#FF5A57" class="relay-glow"/>
-  <circle cx="764" cy="300" r="9" fill="#FF5A57" class="relay-glow"/>
-  <circle cx="764" cy="456" r="9" fill="#FF5A57" class="relay-glow"/>
-  <text x="134" y="236" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">APP SHELL</text>
-  <text x="134" y="282" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">iOS App</text>
-  <text x="134" y="326" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Lifecycle enforcement</text>
-  <text x="134" y="356" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Network validation</text>
-  <text x="134" y="456" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">CLIENT PLANE</text>
-  <text x="134" y="502" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">Rust Runtime</text>
-  <text x="134" y="546" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">X3DH / Double Ratchet</text>
-  <text x="134" y="576" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Volatile state and policy</text>
-  <text x="548" y="274" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">RELAY NODE</text>
-  <text x="548" y="318" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="38" font-weight="700">Opaque transport</text>
-  <text x="548" y="362" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">TLS, HMAC, replay defense</text>
-  <text x="548" y="392" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Fetch-once ciphertext blobs</text>
-  <rect x="606" y="418" width="88" height="96" rx="18" fill="#0D0708" stroke="rgba(255,255,255,0.06)"/>
-  <rect x="648" y="428" width="30" height="76" rx="10" fill="url(#door)"/>
-  <path d="M659 435v61M669 438v59" stroke="#6D0A11" stroke-width="2.4" stroke-linecap="round"/>
-  <circle cx="673" cy="470" r="3.2" fill="#F4C343"/>
-  <text x="948" y="236" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">DISCOVERY</text>
-  <text x="948" y="282" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">Directory DHT</text>
-  <text x="948" y="326" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Signed bundle resolution</text>
-  <text x="948" y="456" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">EVIDENCE</text>
-  <text x="948" y="502" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">Blockchain Node</text>
-  <text x="948" y="546" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Commitments only</text>
-  <text x="948" y="576" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">No plaintext on-chain</text>
+  <rect width="1280" height="760" rx="34" fill="#0A0607"/>
+  <rect x="64" y="88" width="360" height="584" rx="34" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="456" y="120" width="332" height="520" rx="38" fill="rgba(241,31,42,0.055)" stroke="rgba(241,31,42,0.22)"/>
+  <rect x="820" y="88" width="396" height="584" rx="34" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="96" y="138" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="5.2">TRUSTED EDGES</text>
+  <text x="502" y="138" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="5.2">NARROW MIDDLE</text>
+  <text x="854" y="138" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="5.2">SUPPORT PLANES</text>
+  <rect x="100" y="176" width="288" height="188" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="card-breathe"/>
+  <rect x="100" y="392" width="288" height="188" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="card-breathe"/>
+  <rect x="522" y="218" width="200" height="324" rx="32" fill="#171012" stroke="rgba(241,31,42,0.26)"/>
+  <rect x="856" y="176" width="324" height="188" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="card-breathe"/>
+  <rect x="856" y="392" width="324" height="188" rx="28" fill="#161011" stroke="rgba(255,255,255,0.08)" class="card-breathe"/>
+  <path d="M388 272C442 272 466 272 522 286" stroke="#F11F2A" stroke-width="7" stroke-linecap="round" stroke-dasharray="18 18" class="flow-path"/>
+  <path d="M388 488C442 488 468 482 522 470" stroke="#F11F2A" stroke-width="7" stroke-linecap="round" stroke-dasharray="18 18" class="flow-path"/>
+  <path d="M722 300C776 300 808 284 856 272" stroke="#F11F2A" stroke-width="7" stroke-linecap="round" stroke-dasharray="18 18" class="flow-path"/>
+  <path d="M722 462C776 462 808 476 856 488" stroke="#F11F2A" stroke-width="7" stroke-linecap="round" stroke-dasharray="18 18" class="flow-path"/>
+  <circle cx="522" cy="286" r="8.5" fill="#FF5A57" class="flow-node"/>
+  <circle cx="522" cy="470" r="8.5" fill="#FF5A57" class="flow-node"/>
+  <circle cx="856" cy="272" r="8.5" fill="#FF5A57" class="flow-node"/>
+  <circle cx="856" cy="488" r="8.5" fill="#FF5A57" class="flow-node"/>
+  <text x="132" y="228" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">APP SHELL</text>
+  <text x="132" y="274" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">iOS App</text>
+  <text x="132" y="318" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Lifecycle wipes and duress policy</text>
+  <text x="132" y="348" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Secure network validation</text>
+  <text x="132" y="444" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">CLIENT RUNTIME</text>
+  <text x="132" y="490" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">Rust Runtime</text>
+  <text x="132" y="534" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">X3DH and Double Ratchet state</text>
+  <text x="132" y="564" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Volatile memory and wipe flows</text>
+  <text x="548" y="274" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">UNTRUSTED RELAY</text>
+  <text x="548" y="318" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">Opaque transport</text>
+  <text x="548" y="362" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">TLS, HMAC, replay resistance</text>
+  <text x="548" y="392" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Fetch-once ciphertext envelopes</text>
+  <rect x="576" y="430" width="92" height="88" rx="20" fill="#0D0708" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="620" y="440" width="28" height="68" rx="10" fill="url(#door)"/>
+  <path d="M630 448v52M639 450v54" stroke="#6D0A11" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="643" cy="475" r="3.2" fill="#F4C343"/>
+  <text x="890" y="228" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">DISCOVERY PLANE</text>
+  <text x="890" y="274" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="34" font-weight="700">Directory DHT</text>
+  <text x="890" y="318" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">Signed bundle resolution</text>
+  <text x="890" y="348" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="22">TTL prekeys and lease ownership</text>
+  <text x="890" y="444" fill="#F11F2A" font-family="Avenir Next, sans-serif" font-size="18" letter-spacing="4.2">INTEGRITY PLANE</text>
+  <text x="890" y="490" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="28" font-weight="700">Blockchain</text>
+  <text x="890" y="522" fill="#FFF8F7" font-family="Avenir Next, sans-serif" font-size="28" font-weight="700">commitments</text>
+  <text x="890" y="552" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="20">Commitment evidence only</text>
+  <text x="890" y="580" fill="#EADEDF" font-family="Avenir Next, sans-serif" font-size="20">No plaintext or ciphertext on-chain</text>
   <defs>
-    <linearGradient id="door" x1="663" y1="428" x2="663" y2="504" gradientUnits="userSpaceOnUse">
+    <linearGradient id="door" x1="634" y1="440" x2="634" y2="508" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FF5A57"/>
       <stop offset=".58" stop-color="#F11F2A"/>
       <stop offset="1" stop-color="#930E16"/>

@@ -12,7 +12,7 @@ permalink: /site.webmanifest
   "theme_color": "#080506",
   "icons": [
     {
-      "src": "{{ '/favicon.svg' | relative_url }}",
+      "src": "{{ '/assets/img/brand/redoor-mark.svg' | relative_url }}",
       "sizes": "any",
       "type": "image/svg+xml"
     },

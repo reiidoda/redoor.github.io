@@ -9,7 +9,7 @@
 .panel-card {
   position: relative;
   overflow: hidden;
-  padding: var(--space-6);
+  padding: var(--panel-padding);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background:
@@ -51,6 +51,8 @@
   font-size: 1.12rem;
   font-weight: 650;
   color: var(--text);
+  line-height: 1.25;
+  text-wrap: balance;
 }
 
 .feature-card h3,
@@ -86,7 +88,7 @@
 
 .article-card {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-block);
   padding: 0;
   transition:
     transform var(--duration-fast) var(--easing-standard),
@@ -114,7 +116,7 @@
 }
 
 .article-card__body {
-  padding: 0 var(--space-6) var(--space-6);
+  padding: 0 var(--panel-padding) var(--panel-padding);
 }
 
 .article-card__meta {
@@ -145,7 +147,7 @@
 }
 
 .diagram-frame {
-  padding: var(--space-5);
+  padding: var(--panel-padding);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.02);
