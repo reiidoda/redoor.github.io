@@ -1,0 +1,92 @@
+.architecture-stage {
+  gap: var(--space-stack);
+}
+
+.architecture-stage__summary {
+  padding: var(--panel-padding);
+  height: 100%;
+}
+
+.architecture-stage__metrics {
+  list-style: none;
+  display: grid;
+  gap: var(--space-block);
+  padding: 0;
+  margin: var(--space-block) 0 0;
+}
+
+.architecture-stage__metrics li {
+  display: grid;
+  gap: 0.32rem;
+  margin: 0;
+}
+
+.architecture-stage__metrics strong {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.architecture-stage__metrics span {
+  color: var(--muted-strong);
+  font-size: var(--text-sm);
+}
+
+.architecture-visual,
+.flow-stage {
+  display: grid;
+  gap: var(--space-stack);
+  padding: var(--panel-padding);
+}
+
+.architecture-visual {
+  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1.58fr);
+  align-items: start;
+}
+
+.architecture-visual__copy {
+  max-width: 38ch;
+  padding-top: 0.2rem;
+}
+
+.architecture-visual__copy p + p {
+  margin-top: 0.75rem;
+}
+
+.diagram-frame--architecture,
+.diagram-frame--flow {
+  background:
+    radial-gradient(circle at 24% 18%, rgba(241, 31, 42, 0.08), transparent 28%),
+    rgba(255, 255, 255, 0.015);
+}
+
+.flow-stage {
+  grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
+  align-items: start;
+}
+
+.flow-list--stacked {
+  align-content: start;
+}
+
+.flow-list--stacked .flow-step {
+  background:
+    linear-gradient(180deg, rgba(241, 31, 42, 0.05), rgba(255, 255, 255, 0.015)),
+    rgba(255, 255, 255, 0.015);
+}
+
+.diagram-frame--architecture img,
+.diagram-frame--flow img {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .architecture-visual {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  .flow-stage {
+    grid-template-columns: 1fr;
+  }
+}

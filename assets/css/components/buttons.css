@@ -1,0 +1,54 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.7rem;
+  padding: 0.62rem 1.08rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 640;
+  letter-spacing: 0.01em;
+  transition:
+    transform var(--duration-fast) var(--easing-standard),
+    border-color var(--duration-fast) var(--easing-standard),
+    background-color var(--duration-fast) var(--easing-standard),
+    color var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate3d(0, -1px, 0);
+}
+
+.button-primary {
+  color: #fff8f7;
+  background: linear-gradient(180deg, var(--accent-strong), var(--accent) 56%, var(--accent-deep));
+  border-color: rgba(255, 164, 163, 0.38);
+  box-shadow: 0 16px 34px rgba(143, 16, 23, 0.32);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: linear-gradient(180deg, #ff726c, #f11f2a 56%, #a50f18);
+}
+
+.button-ghost {
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.button-ghost:hover,
+.button-ghost:focus-visible {
+  border-color: var(--accent-line);
+  background: var(--accent-surface);
+}
+
+@media (max-width: 760px) {
+  .button {
+    flex: 1 1 180px;
+  }
+}

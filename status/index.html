@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Status</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Status" />
+<meta name="author" content="ReDoor Maintainers" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="ReDoor project status summary derived from the current public status board, roadmap, and control matrix in the upstream repository." />
+<meta property="og:description" content="ReDoor project status summary derived from the current public status board, roadmap, and control matrix in the upstream repository." />
+<link rel="canonical" href="https://reiidoda.github.io/redoor-site/status/" />
+<meta property="og:url" content="https://reiidoda.github.io/redoor-site/status/" />
+<meta property="og:site_name" content="ReDoor" />
+<meta property="og:image" content="https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg" />
+<meta property="twitter:title" content="Status" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@ReDoor Maintainers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"ReDoor Maintainers","url":"https://github.com/reiidoda/ReDoor"},"description":"ReDoor project status summary derived from the current public status board, roadmap, and control matrix in the upstream repository.","headline":"Status","image":"https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://reiidoda.github.io/redoor-site/assets/img/brand/redoor-mark.svg"},"name":"ReDoor Maintainers"},"url":"https://reiidoda.github.io/redoor-site/status/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+
+  <meta name="robots" content="index, follow">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ReDoor",
+    "url": "https://reiidoda.github.io/redoor-site/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://reiidoda.github.io/redoor-site/assets/img/brand/redoor-mark.svg"
+    },
+    "sameAs": ["https://github.com/reiidoda/ReDoor"]
+  }
+</script>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Status",
+      "description": "ReDoor project status summary derived from the current public status board, roadmap, and control matrix in the upstream repository.",
+      "url": "https://reiidoda.github.io/redoor-site/status/",
+      "mainEntityOfPage": "https://reiidoda.github.io/redoor-site/status/",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "ReDoor",
+        "url": "https://reiidoda.github.io/redoor-site/"
+      },
+      "keywords": "project status, open source status board, implementation status"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://reiidoda.github.io/redoor-site/"
+          },
+        
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Status",
+            "item": "https://reiidoda.github.io/redoor-site/status/"
+          }
+        
+      ]
+    }
+  </script>
+
+
+
+<meta name="application-name" content="ReDoor">
+<meta property="og:site_name" content="ReDoor">
+<meta name="theme-color" content="#080405">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="/redoor-site/assets/img/brand/redoor-mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/redoor-site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/redoor-site/favicon-16.png">
+<link rel="shortcut icon" href="/redoor-site/favicon-32.png">
+<link rel="apple-touch-icon" href="/redoor-site/apple-touch-icon.png">
+<link rel="mask-icon" href="/redoor-site/safari-pinned-tab.svg" color="#f11f2a">
+<link rel="manifest" href="/redoor-site/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="ReDoor Feed" href="https://reiidoda.github.io/redoor-site/feed.xml">
+<link rel="stylesheet" href="/redoor-site/assets/css/main.css">
+<script defer src="/redoor-site/assets/js/main.js"></script>
+
+  </head>
+  
+  <body class="page-status">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-site-header>
+  <div class="shell-wide header-inner">
+    <a class="brand" href="/redoor-site/" aria-label="ReDoor home">
+      <span class="brand-mark-wrap" aria-hidden="true">
+        <img class="brand-mark" src="/redoor-site/assets/img/brand/redoor-mark.svg" alt="" width="24" height="24" loading="eager" decoding="async">
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name-row">
+          <span class="brand-name">ReDoor</span>
+          <span class="brand-chip">Canonical project site</span>
+        </span>
+        <span class="brand-tag">Privacy-first secure messaging with untrusted relays</span>
+      </span>
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+      aria-label="Open navigation"
+    >
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <nav id="primary-navigation" class="site-nav" data-site-nav aria-label="Primary navigation">
+      <ul class="menu">
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/"
+              data-nav-link
+              
+            >
+              Home
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/architecture/"
+              data-nav-link
+              
+            >
+              Architecture
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/security/"
+              data-nav-link
+              
+            >
+              Security
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/compare/"
+              data-nav-link
+              
+            >
+              Compare
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/roadmap/"
+              data-nav-link
+              
+            >
+              Roadmap
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/blog/"
+              data-nav-link
+              
+            >
+              Blog
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/docs/"
+              data-nav-link
+              
+            >
+              Docs
+            </a>
+          </li>
+        
+          <li class="menu__item menu__item--cta">
+            <a
+              class="menu__link menu__link--cta"
+              href="https://github.com/reiidoda/ReDoor"
+              data-nav-link
+              target="_blank" rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero section" aria-labelledby="page-title" data-reveal>
+  <div class="shell">
+    
+
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
+    <ol>
+      
+        <li>
+          
+            <a href="/redoor-site/">Home</a>
+          
+        </li>
+      
+        <li>
+          
+            <span aria-current="page">Status</span>
+          
+        </li>
+      
+    </ol>
+  </nav>
+
+
+
+    
+      <p class="section-label">Project Status</p>
+    
+    <div class="page-hero__grid">
+      <div class="page-hero__copy">
+        <h1 id="page-title">Status</h1>
+        
+          <p class="page-hero__lead">This page compresses the upstream open-source status board into a public summary: what recently landed, what is actively being worked, and which control areas are fully implemented versus partial.</p>
+        
+      </div>
+      
+        <aside class="page-hero__panel premium-panel">
+          <p class="page-hero__panel-label">Last synced</p>
+          <p class="page-hero__panel-value">2026-03-19</p>
+          
+            <p class="page-hero__panel-detail">Derived from docs/OPEN_SOURCE_STATUS and docs/security/control-matrix in the upstream repository.</p>
+          
+        </aside>
+      
+    </div>
+    
+      <div class="cta-group">
+        
+          <a
+            class="button button-primary"
+            href="/redoor-site/roadmap/"
+            
+          >
+            Public Roadmap
+          </a>
+        
+          <a
+            class="button button-ghost"
+            href="https://github.com/reiidoda/ReDoor/issues"
+            target="_blank" rel="noopener noreferrer"
+          >
+            Open Issues
+          </a>
+        
+          <a
+            class="button button-ghost"
+            href="/redoor-site/security/"
+            
+          >
+            Security Model
+          </a>
+        
+      </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="shell page-content">
+    <section class="page-section" data-reveal="">
+      <article class="status-source premium-panel">
+        <p class="section-label">Source Of Truth</p>
+        <h2>Public status is intentionally documented.</h2>
+        <p>
+          Canonical tracker:
+          <a href="https://github.com/reiidoda/ReDoor/issues" target="_blank" rel="noopener noreferrer">https://github.com/reiidoda/ReDoor/issues</a>.
+          Last synced 2026-03-19 by maintainers.
+        </p>
+      </article>
+    </section>
+
+    <section class="page-section" data-reveal="">
+      <div class="page-section__header">
+        <p class="section-label">Recently Completed</p>
+        <h2>Work that has already landed publicly.</h2>
+      </div>
+      <ul class="rich-list">
+        
+          <li>#1 iOS runtime wiring now uses real Rust FFI and production stub linkage is guarded in CI.</li>
+        
+          <li>#2 Relay connection metrics now expose runtime-derived values in FFI with tests.</li>
+        
+          <li>#4 Active workflows now use current action versions compatible with the Node 24 transition.</li>
+        
+          <li>#5 Enterprise M1 was decomposed into scoped implementation issues (#28 to #31).</li>
+        
+          <li>#6 PIR or proxy graduation planning was documented and split into follow-up tasks (#23 to #26).</li>
+        
+          <li>#14 Fuzz matrix and nightly coverage tracking were expanded.</li>
+        
+          <li>#16 Relay and directory anomaly detection plus response-playbook linkage were added.</li>
+        
+          <li>#35 Release role sign-off workflow and fallback delegate policy were documented.</li>
+        
+          <li>#36 Security-relevant PR checklist enforcement and control-matrix maintenance were added.</li>
+        
+          <li>#37 Build-isolation assumptions, provenance requirements, and release blockers were documented.</li>
+        
+      </ul>
+    </section>
+
+    <section class="page-section" data-reveal="">
+      <div class="page-section__header">
+        <p class="section-label">Active Public Work</p>
+        <h2>The live priorities now.</h2>
+      </div>
+
+      <div class="roadmap-grid">
+        
+          <article class="roadmap-card">
+            <p class="roadmap-card__label">Active track</p>
+            <h3>Standards alignment and contributor hardening</h3>
+            <ul class="link-list">
+              
+                <li>#38 Auth hardening: ASVS-V2 mapped tests for admin and scoped credentials.</li>
+              
+                <li>#39 Validation hardening: ASVS-V5 replay and malformed-input negative-path coverage.</li>
+              
+                <li>#40 Mobile hardening: MASVS resilience evidence for runtime compromise conditions.</li>
+              
+            </ul>
+          </article>
+        
+          <article class="roadmap-card">
+            <p class="roadmap-card__label">Active track</p>
+            <h3>Key management and release hardening</h3>
+            <ul class="link-list">
+              
+                <li>#15 KMS or HSM-backed signing and rotation path.</li>
+              
+            </ul>
+          </article>
+        
+          <article class="roadmap-card">
+            <p class="roadmap-card__label">Active track</p>
+            <h3>Privacy track</h3>
+            <ul class="link-list">
+              
+                <li>#23 PIR or proxy benchmark gates and CI evidence.</li>
+              
+                <li>#24 Proxy trust controls and jurisdiction split model.</li>
+              
+                <li>#25 PIR or proxy abuse controls and response playbooks.</li>
+              
+                <li>#26 PIR or proxy pilot rollout and rollback gate.</li>
+              
+            </ul>
+          </article>
+        
+          <article class="roadmap-card">
+            <p class="roadmap-card__label">Active track</p>
+            <h3>Enterprise M1 execution</h3>
+            <ul class="link-list">
+              
+                <li>#28 OpenAPI contracts and strict request validation.</li>
+              
+                <li>#29 mTLS service-plane identity and certificate rotation.</li>
+              
+                <li>#30 KMS bootstrap key management and staged rotation framework.</li>
+              
+                <li>#31 Security event taxonomy and structured audit-log rollout.</li>
+              
+            </ul>
+          </article>
+        
+      </div>
+    </section>
+
+    <section class="page-section" data-reveal="">
+      <div class="page-section__header">
+        <p class="section-label">Control Summary</p>
+        <h2>Implemented versus partial standards alignment.</h2>
+      </div>
+
+      <div class="status-grid">
+        
+          <article class="status-card">
+            <p class="status-card__label"><code>SSDF-PO.1</code></p>
+            <h3>Release role sign-off workflow</h3>
+            
+            
+            <span class="pill status-chip--implemented">Implemented</span>
+          </article>
+        
+          <article class="status-card">
+            <p class="status-card__label"><code>SSDF-PW.4</code></p>
+            <h3>PR checklist and control-matrix maintenance</h3>
+            
+            
+            <span class="pill status-chip--implemented">Implemented</span>
+          </article>
+        
+          <article class="status-card">
+            <p class="status-card__label"><code>SLSA-BUILD.2</code></p>
+            <h3>Build isolation and provenance policy</h3>
+            
+            
+            <span class="pill status-chip--implemented">Implemented</span>
+          </article>
+        
+          <article class="status-card">
+            <p class="status-card__label"><code>ASVS-V2</code></p>
+            <h3>Auth and access-control negative-path coverage</h3>
+            
+            
+            <span class="pill status-chip--progress">Partial</span>
+          </article>
+        
+          <article class="status-card">
+            <p class="status-card__label"><code>ASVS-V5</code></p>
+            <h3>Replay and malformed-input coverage</h3>
+            
+            
+            <span class="pill status-chip--progress">Partial</span>
+          </article>
+        
+          <article class="status-card">
+            <p class="status-card__label"><code>MASVS-RESILIENCE</code></p>
+            <h3>Mobile runtime compromise resilience</h3>
+            
+            
+            <span class="pill status-chip--progress">Partial</span>
+          </article>
+        
+          <article class="status-card">
+            <p class="status-card__label"><code>KEY-HSM</code></p>
+            <h3>Managed signing and rotation</h3>
+            
+            
+            <span class="pill status-chip--progress">Partial</span>
+          </article>
+        
+      </div>
+    </section>
+  </div>
+</section>
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="shell-wide footer-shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-brand__link" href="/redoor-site/" aria-label="ReDoor home">
+          <span class="brand-mark-wrap footer-brand__mark" aria-hidden="true">
+            <img class="brand-mark" src="/redoor-site/assets/img/brand/redoor-mark.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+          </span>
+          <span>
+            <span class="footer-brand__name">ReDoor</span>
+            <span class="footer-brand__tag">Open-source secure messaging architecture</span>
+          </span>
+        </a>
+        <p class="footer-status">Canonical public surface for ReDoor architecture, security posture, roadmap, and contributor-facing documentation.</p>
+      </div>
+
+      <div class="footer-groups">
+        
+          <section class="footer-group" aria-label="Navigate">
+            <h2 class="footer-group__title">Navigate</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="/redoor-site/architecture/"
+                    
+                  >
+                    Architecture
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/security/"
+                    
+                  >
+                    Security
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/compare/"
+                    
+                  >
+                    Compare
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/blog/"
+                    
+                  >
+                    Blog
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+          <section class="footer-group" aria-label="Project">
+            <h2 class="footer-group__title">Project</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="/redoor-site/roadmap/"
+                    
+                  >
+                    Roadmap
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/status/"
+                    
+                  >
+                    Status
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/docs/"
+                    
+                  >
+                    Docs
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+          <section class="footer-group" aria-label="Trust">
+            <h2 class="footer-group__title">Trust</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor/blob/main/SECURITY.md"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Security Policy
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor/blob/main/docs/security/STANDARDS_PROFILE.md"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Standards Profile
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/feed.xml"
+                    
+                  >
+                    RSS
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+      </div>
+    </div>
+
+    <div class="footer-meta-row">
+      <p class="footer-copy">© 2026 ReDoor</p>
+      <p class="footer-legal">Built with GitHub Pages and Jekyll.</p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
+

@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+
+
+
+<title>ReDoor</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ReDoor" />
+<meta name="author" content="ReDoor Maintainers" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="ReDoor is an open-source privacy-first secure messaging platform built around untrusted relays, X3DH and Double Ratchet foundations, volatile client state, metadata-resistance work, and blockchain-backed tamper evidence." />
+<meta property="og:description" content="ReDoor is an open-source privacy-first secure messaging platform built around untrusted relays, X3DH and Double Ratchet foundations, volatile client state, metadata-resistance work, and blockchain-backed tamper evidence." />
+<link rel="canonical" href="https://reiidoda.github.io/redoor-site/" />
+<meta property="og:url" content="https://reiidoda.github.io/redoor-site/" />
+<meta property="og:site_name" content="ReDoor" />
+<meta property="og:image" content="https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg" />
+<meta property="twitter:title" content="ReDoor" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@ReDoor Maintainers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"ReDoor Maintainers","url":"https://github.com/reiidoda/ReDoor"},"description":"ReDoor is an open-source privacy-first secure messaging platform built around untrusted relays, X3DH and Double Ratchet foundations, volatile client state, metadata-resistance work, and blockchain-backed tamper evidence.","headline":"ReDoor","image":"https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg","name":"ReDoor","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://reiidoda.github.io/redoor-site/assets/img/brand/redoor-mark.svg"},"name":"ReDoor Maintainers"},"sameAs":["https://github.com/reiidoda/ReDoor"],"url":"https://reiidoda.github.io/redoor-site/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+
+  <meta name="robots" content="index, follow">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ReDoor",
+    "url": "https://reiidoda.github.io/redoor-site/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://reiidoda.github.io/redoor-site/assets/img/brand/redoor-mark.svg"
+    },
+    "sameAs": ["https://github.com/reiidoda/ReDoor"]
+  }
+</script>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ReDoor",
+      "url": "https://reiidoda.github.io/redoor-site/",
+      "description": "ReDoor is an open-source privacy-first secure messaging platform built around untrusted relays, X3DH and Double Ratchet foundations, volatile client state, metadata-resistance work, and blockchain-backed tamper evidence.",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ReDoor",
+        "url": "https://reiidoda.github.io/redoor-site/"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "ReDoor",
+      "codeRepository": "https://github.com/reiidoda/ReDoor",
+      "url": "https://reiidoda.github.io/redoor-site/",
+      "description": "ReDoor is an open-source privacy-first secure messaging platform built around untrusted relays, X3DH and Double Ratchet foundations, volatile client state, metadata-resistance work, and blockchain-backed tamper evidence.",
+      "programmingLanguage": ["Rust", "Swift", "Go"],
+      "license": "https://opensource.org/licenses/MIT"
+    }
+  </script>
+
+
+
+
+
+<meta name="application-name" content="ReDoor">
+<meta property="og:site_name" content="ReDoor">
+<meta name="theme-color" content="#080405">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="/redoor-site/assets/img/brand/redoor-mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/redoor-site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/redoor-site/favicon-16.png">
+<link rel="shortcut icon" href="/redoor-site/favicon-32.png">
+<link rel="apple-touch-icon" href="/redoor-site/apple-touch-icon.png">
+<link rel="mask-icon" href="/redoor-site/safari-pinned-tab.svg" color="#f11f2a">
+<link rel="manifest" href="/redoor-site/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="ReDoor Feed" href="https://reiidoda.github.io/redoor-site/feed.xml">
+<link rel="stylesheet" href="/redoor-site/assets/css/main.css">
+<script defer src="/redoor-site/assets/js/main.js"></script>
+
+  </head>
+  
+  <body class="page-home">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-site-header>
+  <div class="shell-wide header-inner">
+    <a class="brand" href="/redoor-site/" aria-label="ReDoor home">
+      <span class="brand-mark-wrap" aria-hidden="true">
+        <img class="brand-mark" src="/redoor-site/assets/img/brand/redoor-mark.svg" alt="" width="24" height="24" loading="eager" decoding="async">
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name-row">
+          <span class="brand-name">ReDoor</span>
+          <span class="brand-chip">Canonical project site</span>
+        </span>
+        <span class="brand-tag">Privacy-first secure messaging with untrusted relays</span>
+      </span>
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+      aria-label="Open navigation"
+    >
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <nav id="primary-navigation" class="site-nav" data-site-nav aria-label="Primary navigation">
+      <ul class="menu">
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/"
+              data-nav-link
+              
+            >
+              Home
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/architecture/"
+              data-nav-link
+              
+            >
+              Architecture
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/security/"
+              data-nav-link
+              
+            >
+              Security
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/compare/"
+              data-nav-link
+              
+            >
+              Compare
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/roadmap/"
+              data-nav-link
+              
+            >
+              Roadmap
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/blog/"
+              data-nav-link
+              
+            >
+              Blog
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/docs/"
+              data-nav-link
+              
+            >
+              Docs
+            </a>
+          </li>
+        
+          <li class="menu__item menu__item--cta">
+            <a
+              class="menu__link menu__link--cta"
+              href="https://github.com/reiidoda/ReDoor"
+              data-nav-link
+              target="_blank" rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+  <div class="shell-wide hero__grid">
+    <div class="hero__copy" data-reveal>
+      <p class="hero__eyebrow">Secure Messaging Platform</p>
+      <h1 class="hero__headline" id="hero-title">
+        ReDoor
+        <span>Privacy-first secure messaging with untrusted relays</span>
+      </h1>
+      <p class="hero__summary">Open-source secure messaging architecture built around X3DH and Double Ratchet foundations, relay-blind forwarding, volatile client state, and blockchain-backed tamper evidence.
+</p>
+
+      <div class="cta-group">
+        <a class="button button-primary" href="/redoor-site/architecture/">Read Architecture</a>
+        <a class="button button-ghost" href="https://github.com/reiidoda/ReDoor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <a class="button button-ghost" href="/redoor-site/security/">Read Security Model</a>
+      </div>
+
+      <ul class="hero-links" aria-label="Primary destinations">
+        <li><a href="/redoor-site/compare/">Compare ReDoor</a></li>
+        <li><a href="/redoor-site/roadmap/">Public roadmap</a></li>
+        <li><a href="/redoor-site/docs/">Documentation hub</a></li>
+        <li><a href="https://github.com/reiidoda/ReDoor" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+      </ul>
+
+      <div class="metric-strip" data-reveal>
+        
+          <article class="stat-card">
+            <p class="stat-card__label">Protocol baseline</p>
+            <p class="stat-card__value">X3DH + Double Ratchet</p>
+          </article>
+        
+          <article class="stat-card">
+            <p class="stat-card__label">Relay posture</p>
+            <p class="stat-card__value">Untrusted, fetch-once transport</p>
+          </article>
+        
+          <article class="stat-card">
+            <p class="stat-card__label">State policy</p>
+            <p class="stat-card__value">Volatile client runtime</p>
+          </article>
+        
+          <article class="stat-card">
+            <p class="stat-card__label">Integrity plane</p>
+            <p class="stat-card__value">Blockchain commitments</p>
+          </article>
+        
+      </div>
+    </div>
+
+    <div class="hero-visual hero-door-scene" data-reveal aria-hidden="true">
+  <div class="hero-door-scene__field" aria-hidden="true"></div>
+
+  <div class="hero-door-scene__stage">
+    <div class="hero-door-scene__portal">
+      <span class="hero-door-scene__backlight" aria-hidden="true"></span>
+      <span class="hero-door-scene__hinge hero-door-scene__hinge--top" aria-hidden="true"></span>
+      <span class="hero-door-scene__hinge hero-door-scene__hinge--mid" aria-hidden="true"></span>
+      <span class="hero-door-scene__hinge hero-door-scene__hinge--bottom" aria-hidden="true"></span>
+
+      <div class="hero-door" aria-hidden="true">
+        <span class="hero-door__panel hero-door__panel--main"></span>
+        <span class="hero-door__panel hero-door__panel--edge"></span>
+        <span class="hero-door__panel hero-door__panel--inner"></span>
+        <span class="hero-door__split hero-door__split--left"></span>
+        <span class="hero-door__split hero-door__split--right"></span>
+        <span class="hero-door__knob"></span>
+      </div>
+
+      <span class="hero-door-scene__threshold" aria-hidden="true"></span>
+    </div>
+
+    <span class="hero-door-scene__shadow" aria-hidden="true"></span>
+
+    <div class="hero-door-scene__chips" aria-label="Hero visual callouts">
+      <span class="hero-door-chip hero-door-chip--client">Client runtime</span>
+      <span class="hero-door-chip hero-door-chip--relay">Untrusted relay</span>
+      <span class="hero-door-chip hero-door-chip--directory">Directory DHT</span>
+      <span class="hero-door-chip hero-door-chip--chain">Evidence plane</span>
+    </div>
+  </div>
+
+  <div class="hero-door-scene__legend">
+    <p>Half-open by design: trusted edges guard state, the middle remains opaque, and evidence persists only as commitments.</p>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="section" aria-labelledby="differentiators-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Core Differentiators</p>
+      <h2 id="differentiators-title">A technical product site for a protocol-shaped system.</h2>
+      <p>
+        ReDoor is not presented as a generic chat app. The public-facing site centers on its actual trust posture:
+        untrusted transport, volatile client behavior, integrity evidence, and explicit hardening work.
+      </p>
+    </div>
+
+    <div class="card-grid" data-reveal>
+      
+        <article class="feature-card">
+          <p class="feature-card__label">Why it matters</p>
+          <h3>Relay-blind forwarding</h3>
+          <p>ReDoor’s relay is transport-only. It stores opaque blobs in memory, validates transport controls, and is intentionally not trusted with plaintext content.
+</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="/redoor-site/architecture/">Read more</a>
+          </div>
+        </article>
+      
+        <article class="feature-card">
+          <p class="feature-card__label">Why it matters</p>
+          <h3>Volatile client state</h3>
+          <p>Sensitive runtime state stays in memory and is explicitly wiped on background, resign, terminate, and duress flows in the current design.
+</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="/redoor-site/security/">Read more</a>
+          </div>
+        </article>
+      
+        <article class="feature-card">
+          <p class="feature-card__label">Why it matters</p>
+          <h3>Metadata-resistance direction</h3>
+          <p>Strict anonymity mode, cover traffic, bounded schedule jitter, rotating mailbox handles, and multi-relay retrieval are treated as an ongoing engineering track rather than a slogan.
+</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="/redoor-site/compare/">Read more</a>
+          </div>
+        </article>
+      
+        <article class="feature-card">
+          <p class="feature-card__label">Why it matters</p>
+          <h3>Tamper evidence without plaintext</h3>
+          <p>Hash commitments go to the blockchain evidence plane while plaintext and ciphertext stay off-chain.
+</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="/redoor-site/architecture/">Read more</a>
+          </div>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="architecture-glance-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Architecture At A Glance</p>
+      <h2 id="architecture-glance-title">Architecture at a glance</h2>
+      <p>The product splits into five runtime planes: client, iOS shell, relay transport, directory discovery, and evidence submission. Each plane has a narrow responsibility and a specific trust boundary.
+</p>
+    </div>
+
+    <div class="callout-grid" data-reveal>
+      
+        <article class="callout premium-panel">
+          <p>Plaintext should exist only inside the device boundary.</p>
+        </article>
+      
+        <article class="callout premium-panel">
+          <p>Relay transport is untrusted and content-blind.</p>
+        </article>
+      
+        <article class="callout premium-panel">
+          <p>Directory responses must be signed and verified.</p>
+        </article>
+      
+        <article class="callout premium-panel">
+          <p>The blockchain plane records commitments for integrity, not secrecy.</p>
+        </article>
+      
+    </div>
+
+    <div class="stack-strip" data-reveal>
+      
+        <article class="stack-card">
+          <p class="stack-card__path">client/</p>
+          <h3>Client runtime</h3>
+          <p>Rust cryptographic engine, transport clients, diagnostics, FFI.</p>
+        </article>
+      
+        <article class="stack-card">
+          <p class="stack-card__path">RedoorApp/</p>
+          <h3>iOS app</h3>
+          <p>SwiftUI shell with lifecycle wipes and secure-network validation.</p>
+        </article>
+      
+        <article class="stack-card">
+          <p class="stack-card__path">relay-node/</p>
+          <h3>Relay node</h3>
+          <p>TLS relay with HMAC, replay defense, in-memory queues, abuse controls.</p>
+        </article>
+      
+        <article class="stack-card">
+          <p class="stack-card__path">directory-dht/</p>
+          <h3>Directory DHT</h3>
+          <p>Signed key resolution, TTL prekeys, sequence and lease ownership.</p>
+        </article>
+      
+        <article class="stack-card">
+          <p class="stack-card__path">blockchain-node/</p>
+          <h3>Blockchain node</h3>
+          <p>Commitment ledger for tamper evidence without plaintext storage.</p>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="roadmap-teaser-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Execution Surface</p>
+      <h2 id="roadmap-teaser-title">Public execution surface</h2>
+      <p>
+        Roadmap and status pages mirror the current upstream docs rather than hiding implementation maturity.
+        That keeps the project credible for contributors and security-minded readers.
+      </p>
+    </div>
+
+    <div class="roadmap-grid" data-reveal>
+      
+        <article class="roadmap-card">
+          <p class="roadmap-card__label">Milestone track</p>
+          <h3>Standards and contributor hardening</h3>
+          <p>ASVS and MASVS evidence expansion across auth, validation, and mobile runtime posture.</p>
+        </article>
+      
+        <article class="roadmap-card">
+          <p class="roadmap-card__label">Milestone track</p>
+          <h3>Key custody and release integrity</h3>
+          <p>Managed or hardware-backed signing, reproducibility, provenance, and release sign-off.</p>
+        </article>
+      
+        <article class="roadmap-card">
+          <p class="roadmap-card__label">Milestone track</p>
+          <h3>Privacy track execution</h3>
+          <p>PIR or proxy retrieval research, trust controls, abuse governance, and rollout gates.</p>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="featured-article-title">
+  <div class="shell" data-reveal>
+    <article class="featured-article-card premium-panel">
+      <img
+        src="/redoor-site/assets/img/og/secure-messaging-article-cover.svg"
+        alt="Editorial cover for the flagship ReDoor article"
+        width="1200"
+        height="630"
+        loading="lazy"
+        decoding="async"
+      >
+      <div class="featured-article-card__copy">
+        <p class="section-label">Featured Article</p>
+        <h2 id="featured-article-title">Why Secure Messaging Needs More Than End-to-End Encryption</h2>
+        <p>A technical editorial on why ciphertext secrecy is not enough without metadata resistance, endpoint hardening, and evidence-backed integrity controls.
+</p>
+        <div class="cta-group">
+          <a class="button button-primary" href="/redoor-site/blog/why-secure-messaging-needs-more-than-e2ee/">Read article</a>
+          <a class="button button-ghost" href="/redoor-site/blog/">Open blog</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="trust-title">
+  <div class="shell">
+    <div class="section-intro" data-reveal>
+      <p class="section-label">Trust Surfaces</p>
+      <h2 id="trust-title">Credibility comes from public engineering surfaces.</h2>
+      <p>
+        Source, roadmap, security policy, and status are all first-class navigation paths. The website is meant to
+        route readers into the repo, not replace it.
+      </p>
+    </div>
+
+    <div class="card-grid" data-reveal>
+      
+        <article class="doc-card">
+          <p class="doc-card__label">Trust surface</p>
+          <h3>Source code</h3>
+          <p>The public monorepo is the primary credibility surface.</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="https://github.com/reiidoda/ReDoor" target="_blank" rel="noopener noreferrer">Source code</a>
+          </div>
+        </article>
+      
+        <article class="doc-card">
+          <p class="doc-card__label">Trust surface</p>
+          <h3>Security docs</h3>
+          <p>Threat model, standards profile, and control matrix are public.</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="/redoor-site/security/" >Security docs</a>
+          </div>
+        </article>
+      
+        <article class="doc-card">
+          <p class="doc-card__label">Trust surface</p>
+          <h3>Roadmap</h3>
+          <p>Contributor-facing milestones and active public work stay visible.</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="/redoor-site/roadmap/" >Roadmap</a>
+          </div>
+        </article>
+      
+        <article class="doc-card">
+          <p class="doc-card__label">Trust surface</p>
+          <h3>Status board</h3>
+          <p>The project publishes recently completed work and current priorities.</p>
+          <div class="cta-group">
+            <a class="button button-ghost" href="/redoor-site/status/" >Status board</a>
+          </div>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="shell-wide footer-shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-brand__link" href="/redoor-site/" aria-label="ReDoor home">
+          <span class="brand-mark-wrap footer-brand__mark" aria-hidden="true">
+            <img class="brand-mark" src="/redoor-site/assets/img/brand/redoor-mark.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+          </span>
+          <span>
+            <span class="footer-brand__name">ReDoor</span>
+            <span class="footer-brand__tag">Open-source secure messaging architecture</span>
+          </span>
+        </a>
+        <p class="footer-status">Canonical public surface for ReDoor architecture, security posture, roadmap, and contributor-facing documentation.</p>
+      </div>
+
+      <div class="footer-groups">
+        
+          <section class="footer-group" aria-label="Navigate">
+            <h2 class="footer-group__title">Navigate</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="/redoor-site/architecture/"
+                    
+                  >
+                    Architecture
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/security/"
+                    
+                  >
+                    Security
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/compare/"
+                    
+                  >
+                    Compare
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/blog/"
+                    
+                  >
+                    Blog
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+          <section class="footer-group" aria-label="Project">
+            <h2 class="footer-group__title">Project</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="/redoor-site/roadmap/"
+                    
+                  >
+                    Roadmap
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/status/"
+                    
+                  >
+                    Status
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/docs/"
+                    
+                  >
+                    Docs
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+          <section class="footer-group" aria-label="Trust">
+            <h2 class="footer-group__title">Trust</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor/blob/main/SECURITY.md"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Security Policy
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor/blob/main/docs/security/STANDARDS_PROFILE.md"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Standards Profile
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/feed.xml"
+                    
+                  >
+                    RSS
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+      </div>
+    </div>
+
+    <div class="footer-meta-row">
+      <p class="footer-copy">© 2026 ReDoor</p>
+      <p class="footer-legal">Built with GitHub Pages and Jekyll.</p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
+

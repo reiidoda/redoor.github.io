@@ -1,0 +1,75 @@
+:root {
+  --bg: #080506;
+  --bg-alt: #120b0c;
+  --surface: rgba(16, 10, 11, 0.82);
+  --surface-strong: #171012;
+  --surface-muted: rgba(26, 17, 18, 0.68);
+  --panel-top: rgba(241, 31, 42, 0.08);
+  --panel-bottom: rgba(255, 255, 255, 0.015);
+  --text: #fff8f7;
+  --text-soft: #eadedf;
+  --muted: #a9999a;
+  --muted-strong: #cdbec0;
+  --accent: #f11f2a;
+  --accent-strong: #ff5a57;
+  --accent-deep: #8f1017;
+  --accent-soft: rgba(241, 31, 42, 0.14);
+  --accent-surface: rgba(241, 31, 42, 0.08);
+  --accent-line: rgba(241, 31, 42, 0.28);
+  --accent-glow: rgba(241, 31, 42, 0.22);
+  --warm-soft: rgba(255, 152, 121, 0.12);
+  --line: rgba(241, 226, 229, 0.12);
+  --line-strong: rgba(241, 226, 229, 0.24);
+  --shadow-soft: 0 22px 64px rgba(0, 0, 0, 0.34);
+  --shadow-panel: 0 32px 100px rgba(0, 0, 0, 0.42);
+  --shadow-glow: 0 0 48px rgba(241, 31, 42, 0.12);
+
+  --font-ui: "Neue Montreal", "Avenir Next", "SF Pro Display", "Segoe UI", sans-serif;
+  --font-copy: "Suisse Intl", "Avenir Next", "SF Pro Text", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  --text-xs: 0.76rem;
+  --text-sm: 0.88rem;
+  --text-md: 1rem;
+  --text-lg: 1.08rem;
+  --text-xl: 1.3rem;
+  --display-xl: clamp(2.8rem, 7vw, 6rem);
+  --display-lg: clamp(2rem, 4vw, 3.3rem);
+  --display-md: clamp(1.5rem, 3vw, 2.1rem);
+
+  --leading-tight: 1.14;
+  --leading-regular: 1.62;
+
+  --space-1: 0.2rem;
+  --space-2: 0.45rem;
+  --space-3: 0.68rem;
+  --space-4: 0.9rem;
+  --space-5: 1.15rem;
+  --space-6: 1.45rem;
+  --space-7: 1.8rem;
+  --space-8: 2.3rem;
+  --space-9: 3rem;
+  --space-10: 4rem;
+  --space-11: 5.5rem;
+  --space-12: 7rem;
+  --space-block: clamp(1rem, 2vw, 1.4rem);
+  --space-stack: clamp(1.35rem, 2.8vw, 2rem);
+  --space-section: clamp(2.1rem, 4vw, 3rem);
+  --panel-padding: clamp(1.15rem, 2.2vw, 1.6rem);
+
+  --max-width: 1120px;
+  --max-width-wide: 1280px;
+  --page-gutter: clamp(1rem, 3.4vw, 2.6rem);
+  --header-height: 72px;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+
+  --duration-fast: 0.18s;
+  --duration-mid: 0.45s;
+  --duration-slow: 1.1s;
+  --easing-standard: cubic-bezier(0.2, 0.82, 0.2, 1);
+}

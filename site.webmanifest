@@ -1,0 +1,26 @@
+{
+  "name": "ReDoor",
+  "short_name": "ReDoor",
+  "description": "Privacy-first secure messaging with untrusted relays",
+  "start_url": "/redoor-site/",
+  "display": "standalone",
+  "background_color": "#080506",
+  "theme_color": "#080506",
+  "icons": [
+    {
+      "src": "/redoor-site/assets/img/brand/redoor-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/redoor-site/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/redoor-site/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

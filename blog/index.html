@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Blog</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Blog" />
+<meta name="author" content="ReDoor Maintainers" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="ReDoor articles on secure messaging architecture, metadata resistance, endpoint hardening, and project engineering decisions." />
+<meta property="og:description" content="ReDoor articles on secure messaging architecture, metadata resistance, endpoint hardening, and project engineering decisions." />
+<link rel="canonical" href="https://reiidoda.github.io/redoor-site/blog/" />
+<meta property="og:url" content="https://reiidoda.github.io/redoor-site/blog/" />
+<meta property="og:site_name" content="ReDoor" />
+<meta property="og:image" content="https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg" />
+<meta property="twitter:title" content="Blog" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@ReDoor Maintainers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"ReDoor Maintainers","url":"https://github.com/reiidoda/ReDoor"},"description":"ReDoor articles on secure messaging architecture, metadata resistance, endpoint hardening, and project engineering decisions.","headline":"Blog","image":"https://reiidoda.github.io/redoor-site/assets/img/og/redoor-site-cover.svg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://reiidoda.github.io/redoor-site/assets/img/brand/redoor-mark.svg"},"name":"ReDoor Maintainers"},"url":"https://reiidoda.github.io/redoor-site/blog/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+
+  <meta name="robots" content="index, follow">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ReDoor",
+    "url": "https://reiidoda.github.io/redoor-site/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://reiidoda.github.io/redoor-site/assets/img/brand/redoor-mark.svg"
+    },
+    "sameAs": ["https://github.com/reiidoda/ReDoor"]
+  }
+</script>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Blog",
+      "description": "ReDoor articles on secure messaging architecture, metadata resistance, endpoint hardening, and project engineering decisions.",
+      "url": "https://reiidoda.github.io/redoor-site/blog/",
+      "mainEntityOfPage": "https://reiidoda.github.io/redoor-site/blog/",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "ReDoor",
+        "url": "https://reiidoda.github.io/redoor-site/"
+      }
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://reiidoda.github.io/redoor-site/"
+          },
+        
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://reiidoda.github.io/redoor-site/blog/"
+          }
+        
+      ]
+    }
+  </script>
+
+
+
+<meta name="application-name" content="ReDoor">
+<meta property="og:site_name" content="ReDoor">
+<meta name="theme-color" content="#080405">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="/redoor-site/assets/img/brand/redoor-mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/redoor-site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/redoor-site/favicon-16.png">
+<link rel="shortcut icon" href="/redoor-site/favicon-32.png">
+<link rel="apple-touch-icon" href="/redoor-site/apple-touch-icon.png">
+<link rel="mask-icon" href="/redoor-site/safari-pinned-tab.svg" color="#f11f2a">
+<link rel="manifest" href="/redoor-site/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="ReDoor Feed" href="https://reiidoda.github.io/redoor-site/feed.xml">
+<link rel="stylesheet" href="/redoor-site/assets/css/main.css">
+<script defer src="/redoor-site/assets/js/main.js"></script>
+
+  </head>
+  
+  <body class="page-blog">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-site-header>
+  <div class="shell-wide header-inner">
+    <a class="brand" href="/redoor-site/" aria-label="ReDoor home">
+      <span class="brand-mark-wrap" aria-hidden="true">
+        <img class="brand-mark" src="/redoor-site/assets/img/brand/redoor-mark.svg" alt="" width="24" height="24" loading="eager" decoding="async">
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name-row">
+          <span class="brand-name">ReDoor</span>
+          <span class="brand-chip">Canonical project site</span>
+        </span>
+        <span class="brand-tag">Privacy-first secure messaging with untrusted relays</span>
+      </span>
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+      aria-label="Open navigation"
+    >
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <nav id="primary-navigation" class="site-nav" data-site-nav aria-label="Primary navigation">
+      <ul class="menu">
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/"
+              data-nav-link
+              
+            >
+              Home
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/architecture/"
+              data-nav-link
+              
+            >
+              Architecture
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/security/"
+              data-nav-link
+              
+            >
+              Security
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/compare/"
+              data-nav-link
+              
+            >
+              Compare
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/roadmap/"
+              data-nav-link
+              
+            >
+              Roadmap
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/blog/"
+              data-nav-link
+              
+            >
+              Blog
+            </a>
+          </li>
+        
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/redoor-site/docs/"
+              data-nav-link
+              
+            >
+              Docs
+            </a>
+          </li>
+        
+          <li class="menu__item menu__item--cta">
+            <a
+              class="menu__link menu__link--cta"
+              href="https://github.com/reiidoda/ReDoor"
+              data-nav-link
+              target="_blank" rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+      
+<section class="page-hero section" aria-labelledby="blog-title" data-reveal>
+  <div class="shell">
+    
+
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
+    <ol>
+      
+        <li>
+          
+            <a href="/redoor-site/">Home</a>
+          
+        </li>
+      
+        <li>
+          
+            <span aria-current="page">Blog</span>
+          
+        </li>
+      
+    </ol>
+  </nav>
+
+
+
+    <p class="section-label">Articles</p>
+    <div class="page-hero__grid">
+      <div class="page-hero__copy">
+        <h1 id="blog-title">Blog</h1>
+        <p class="page-hero__lead">
+          Editorial and technical writing around secure messaging architecture, metadata resistance,
+          protocol engineering, and ReDoor’s public implementation direction.
+        </p>
+      </div>
+      <aside class="page-hero__panel premium-panel">
+        <p class="page-hero__panel-label">Feed</p>
+        <p class="page-hero__panel-value">RSS available</p>
+        <p class="page-hero__panel-detail"><a href="/redoor-site/feed.xml">Subscribe to the feed</a></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="featured-post-title">
+  <div class="shell">
+    
+      <article class="featured-article-card premium-panel" data-reveal>
+        <img
+          src="/redoor-site/assets/img/og/secure-messaging-article-cover.svg"
+          alt=""
+          width="1200"
+          height="630"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="featured-article-card__copy">
+          <p class="section-label">Featured</p>
+          <h2 id="featured-post-title">Why Secure Messaging Needs More Than End-to-End Encryption</h2>
+          <p>End-to-end encryption is necessary, but secure messaging also depends on metadata posture, endpoint resilience, relay trust minimization, and integrity evidence.</p>
+          <div class="cta-group">
+            <a class="button button-primary" href="/redoor-site/blog/why-secure-messaging-needs-more-than-e2ee/">Read article</a>
+          </div>
+        </div>
+      </article>
+    
+  </div>
+</section>
+
+<section class="section" aria-labelledby="blog-list-title">
+  <div class="shell" data-reveal>
+    <div class="filter-bar">
+      <div class="filter-search">
+        <label class="visually-hidden" for="post-search">Search articles</label>
+        <input id="post-search" type="search" placeholder="Search by title, excerpt, or tag" data-post-search>
+      </div>
+      <p class="filter-count" data-post-count>1 article</p>
+    </div>
+
+    
+    
+      <ul class="tag-row" aria-label="Blog tags">
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="architecture">architecture</button></li>
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="metadata-privacy">metadata privacy</button></li>
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="protocol-engineering">protocol engineering</button></li>
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="secure-messaging">secure messaging</button></li>
+        
+      </ul>
+    
+
+    <h2 id="blog-list-title" class="visually-hidden">Article list</h2>
+    <div class="article-grid">
+      
+        
+<article class="article-card" data-post-card data-tags="secure-messaging|architecture|metadata-privacy|protocol-engineering" data-search="why secure messaging needs more than end-to-end encryption end-to-end encryption is the minimum admission price for a serious messaging system, not the end of the design problem.
+if a service only answers the question “can the server read the ciphertext?” it has not yet answered several questions that matter just as much in practice:
+who can see the communication graph, what survives on the device, what happens when a relay is compromised,
+how downgrade or replay boundaries fail, and whether tampering leaves any durable evidence.
+
+ secure messaging architecture metadata privacy protocol engineering">
+  <a class="article-card__cover" href="/redoor-site/blog/why-secure-messaging-needs-more-than-e2ee/" aria-hidden="true" tabindex="-1">
+    <img
+      src="/redoor-site/assets/img/og/secure-messaging-article-cover.svg"
+      alt=""
+      width="1200"
+      height="630"
+      loading="lazy"
+      decoding="async"
+    >
+  </a>
+  <div class="article-card__body">
+    <p class="article-card__meta">March 19, 2026 · 7 min read</p>
+    <h2 class="article-card__title"><a href="/redoor-site/blog/why-secure-messaging-needs-more-than-e2ee/">Why Secure Messaging Needs More Than End-to-End Encryption</a></h2>
+    <p class="article-card__excerpt">End-to-end encryption is the minimum admission price for a serious messaging system, not the end of the design problem.
+If a service only answers the question “can the server read the ciphertext?” it has not yet answered several questions that matter just as much in practice:
+who can see the communication graph, what survives on the device, what happens when a relay is compromised,
+how downgrade or replay boundaries fail, and whether tampering leaves any durable evidence.</p>
+    
+      <ul class="tag-row" aria-label="Article tags">
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="secure-messaging">secure messaging</button></li>
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="architecture">architecture</button></li>
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="metadata-privacy">metadata privacy</button></li>
+        
+          <li><button class="pill pill-button" type="button" data-tag-filter="protocol-engineering">protocol engineering</button></li>
+        
+      </ul>
+    
+  </div>
+</article>
+
+      
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="shell-wide footer-shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-brand__link" href="/redoor-site/" aria-label="ReDoor home">
+          <span class="brand-mark-wrap footer-brand__mark" aria-hidden="true">
+            <img class="brand-mark" src="/redoor-site/assets/img/brand/redoor-mark.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+          </span>
+          <span>
+            <span class="footer-brand__name">ReDoor</span>
+            <span class="footer-brand__tag">Open-source secure messaging architecture</span>
+          </span>
+        </a>
+        <p class="footer-status">Canonical public surface for ReDoor architecture, security posture, roadmap, and contributor-facing documentation.</p>
+      </div>
+
+      <div class="footer-groups">
+        
+          <section class="footer-group" aria-label="Navigate">
+            <h2 class="footer-group__title">Navigate</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="/redoor-site/architecture/"
+                    
+                  >
+                    Architecture
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/security/"
+                    
+                  >
+                    Security
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/compare/"
+                    
+                  >
+                    Compare
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/blog/"
+                    
+                  >
+                    Blog
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+          <section class="footer-group" aria-label="Project">
+            <h2 class="footer-group__title">Project</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="/redoor-site/roadmap/"
+                    
+                  >
+                    Roadmap
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/status/"
+                    
+                  >
+                    Status
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/docs/"
+                    
+                  >
+                    Docs
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+          <section class="footer-group" aria-label="Trust">
+            <h2 class="footer-group__title">Trust</h2>
+            <ul class="footer-links">
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor/blob/main/SECURITY.md"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Security Policy
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="https://github.com/reiidoda/ReDoor/blob/main/docs/security/STANDARDS_PROFILE.md"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Standards Profile
+                  </a>
+                </li>
+              
+                <li>
+                  <a
+                    href="/redoor-site/feed.xml"
+                    
+                  >
+                    RSS
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        
+      </div>
+    </div>
+
+    <div class="footer-meta-row">
+      <p class="footer-copy">© 2026 ReDoor</p>
+      <p class="footer-legal">Built with GitHub Pages and Jekyll.</p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
+
